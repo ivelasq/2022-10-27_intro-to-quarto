@@ -35,5 +35,5 @@ If you need to install Quarto v1.0:
 
 ### Clone the repository
 
-On Thursday, October 27th, please clone [this repository](https://github.com/ivelasq/intro-to-quarto-exercises) (please don't clone before Thursday --- I am sure I will be making changes until then!).
+On Thursday, October 27th, please clone [this repository](https://github.com/ivelasq/intro-to-quarto-exercises) (please don't clone before Thursday!).
 
