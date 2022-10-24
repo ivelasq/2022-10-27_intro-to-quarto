@@ -3,7 +3,7 @@
 
 ## Instructions
 
-Welcome to the Intro to Quarto workshop! You have two options if you would like to follow along:
+Welcome to the Intro to Quarto workshop! You have two options if you would like to follow along with the exercises:
 
 * Follow along on [rstudio.cloud](#follow-along-on-rstudio-cloud)
 * Follow along on your [Desktop](#follow-along-on-your-desktop)
