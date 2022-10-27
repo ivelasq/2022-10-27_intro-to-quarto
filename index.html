@@ -401,6 +401,19 @@
 <p>Isabella Velásquez</p>
 </div>
 <p>R-Ladies St.&nbsp;Louis</p>
+<aside class="notes">
+<p>Hi everybody! Thank you so much for joining today’s session. I am so excited to introduce Quarto and many thanks to Laura and the R-Ladies St.&nbsp;Louis co-organizers for having me today.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
@@ -440,7 +453,7 @@
 <p><i class="fa-brands fa-twitter fa-1.4xl" aria-label="twitter"></i> ivelasq3 | <i class="fa-brands fa-linkedin fa-1.4xl" aria-label="linkedin"></i> ivelasq | <i class="fa-brands fa-github fa-1.4xl" aria-label="github"></i> ivelasq | <i class="fa-solid fa-browser fa-1.4xl" aria-label="browser"></i> ivelasq.rbind.io</p>
 
 <img data-src="images/intro.png" class="r-stretch quarto-figure-center"><aside class="notes">
-<p>Digital illustration beginner :)</p>
+<p>My name is Isabella Velásquez. I work at RStudio, soon to be Posit, and have been an R user for many years. I am a co-organizer for R-Ladies Seattle, as well. Just a bit about me, I am an avid hiker and love cats, especially my cat, Kitty. I am also a digital illustration beginner, as you will see in my presentation today.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -459,7 +472,10 @@
 <ul>
 <li class="fragment">Slides: <a href="https://ivelasq.quarto.pub/intro-to-quarto/" class="uri">https://ivelasq.quarto.pub/intro-to-quarto/</a></li>
 <li class="fragment">Session repo with instructions: <a href="https://github.com/ivelasq/2022-10-27_intro-to-quarto" class="uri">https://github.com/ivelasq/2022-10-27_intro-to-quarto</a></li>
-<li class="fragment">Exercise repo: <a href="https://github.com/ivelasq/intro-to-quarto-exercises" class="uri">https://github.com/ivelasq/intro-to-quarto-exercises</a></li>
+<li class="fragment">Exercise repo: <a href="https://github.com/ivelasq/intro-to-quarto-exercises" class="uri">https://github.com/ivelasq/intro-to-quarto-exercises</a>
+<ul>
+<li class="fragment"><a href="https://github.com/ivelasq/intro-to-quarto-exercises" data-preview-link="&quot;true">Resources</a></li>
+</ul></li>
 <li class="fragment">rstudio.cloud Project: <a href="https://rstudio.cloud/content/4823293" class="uri">https://rstudio.cloud/content/4823293</a></li>
 </ul>
 </div>
@@ -483,7 +499,7 @@
 </div>
 </div>
 <aside class="notes">
-<p>You have a few options of how to attend this session. One option is that you have a local copy of the exercises already, and when we get to the different sections you can follow along with what I am doing. Another option is that you go into the rstudio.cloud project to follow along. But, please feel free to just watch the session and try things out on your own afterwards. The slides, repository, and project will stay up so that you can try things out on your own time. One other thing to note is that Quarto has a lot of options for creating content, so I added some reference materials in the exercise README so that you can play around with other options other than the ones I show you.</p>
+<p>You have a few options of how to attend this session. On the README file of the GitHub repo for this session is a list of instructions and a link to the exercise repo. One option is that you have a local copy of the exercises already, and when we get to the different sections you can follow along with what I am doing on your own RStudio. Another option is that you sign up for RStudio Cloud and go into the project to follow along. It is also linked in the instructions. One benefit of this is that you don’t have to have RStudio installed on your computer and the project is ready, the packages are installed for you, and you can save a copy of your work if you would like. But, please feel free to just watch the session and try things out on your own afterwards. The slides, repositories, and project will stay up so that you can try things out on your own time. One other thing to note is that Quarto has a lot of options for creating content, so I added some reference materials in the exercise repo README so that you can play around with other options other than the ones I show you.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -496,14 +512,7 @@
           display:block!important;
       }</style></aside>
 </div>
-</section>
-<section id="quarto-in-100-seconds" class="slide level2 r-stretch">
-<h2>Quarto in 100 seconds</h2>
-<p></p><div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/_20US068pzk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div><p></p>
-
-<aside><div>
-<p>Source: xvzf on YouTube</p>
-</div></aside></section></section>
+</section></section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
 <h1>About <span class="flow">Quarto</span></h1>
@@ -554,7 +563,7 @@
 </div>
 </center>
 <aside class="notes">
-<p>Quarto is an open-source scientific and technical publishing system built on Pandoc. Let’s break this down: Open-source: RStudio believes that it’s better for everyone if the tools used for research and science are free and open. Free software means more reproducibility, widespread sharing of knowledge and techniques, and elimination of cost barriers. You can also see the source code and contribute, too. Scientific and technical: Scientific and technical means that Quarto has specific things for journal articles or scientific papers, like support for code execution, citations, footnotes, scientific markdown, equations, citations, crossrefs, so many things. We’ll be showing some of these later on, but Quarto definitely has the scientific publishing audience in mind. Publishing system: Quarto is a command line interface that creates dynamic content with Python, R, Julia, and Observable. Quarto takes rendered plain text like R Markdown files or mixed formats like Jupyter notebooks to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats. Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format. Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write. We’ll cover this as well.</p>
+<p>Quarto is an open-source scientific and technical publishing system built on Pandoc. Let’s break this down: Open-source: RStudio believes that it’s better for everyone if the tools used for research and science are free and open. Free software means more reproducibility, widespread sharing of knowledge and techniques, and elimination of cost barriers. You can also see the source code and contribute, too. Scientific and technical: Scientific and technical means that Quarto has specific things for journal articles or scientific papers, like support for code execution, citations, footnotes, scientific markdown, equations, citations, crossrefs, so many things. We’ll be showing some of these later on, but Quarto definitely has the scientific publishing audience in mind. Publishing system: Quarto is a tool for writing dynamic documents that combine code, output, and text. It can embed output from Python, R, Julia, and Observable. Quarto can be rendered to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats. Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format.Quarto documents are authored with markdown, which is a plain text format. But Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write. We’ll cover this as well.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -580,7 +589,7 @@
 <p>Can we reimplement R Markdown such that it’s not tied to R?</p>
 
 <aside class="notes">
-<p>R Markdown is a file format for making dynamic documents with R.</p>
+<p>R Markdown is a file format for making dynamic documents with R. However, you need to call it from R to use it, and it was depedentn on knitr. If you’re a Python user, it means you need to install R to use R Markdown. Quarto is a tool that you can call from the terminal or command line, and is independent from the computational systems. Quarto supports knitr, and can support others. So, you can think of Quarto as the next generation R Markdown that is fundamentally multilanguage and multiengine.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -606,6 +615,19 @@
 </ul>
 </div>
 
+<aside class="notes">
+<p>So the goals are to create these dynamic documents that can be reproducible and automated. [story about building documents]. For single-source publishing, you often need to create all sorts of output, like things that are printed, on the web, on the mobile. The idea is to being able to make publications from one source.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <aside><div>
 <p>Check out <a href="https://www.youtube.com/watch?v=9jGc0TxoRco">JJ Allaire’s R Medicine Keynote</a>!</p>
 </div></aside></section>
@@ -624,7 +646,7 @@
 </div>
 
 <aside class="notes">
-<p>Quarto sits inside the literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. [click] There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!</p>
+<p>Quarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. [click] There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -649,6 +671,19 @@
 </div>
 <div class="fragment">
 <p>Let’s bring R Markdown to everybody!</p>
+<aside class="notes">
+<p>So, if there already exist literate programming tools out there, why create a new one, especially since RStudio is also behind R Markdown? Like mentioned earlier, Quarto was built from the start to support multiple computational systems and ecosystems. This new system brings R Markdown to everybody.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </div>
 </section>
 <section id="why-is-it-called-quarto" class="slide level2">
@@ -728,7 +763,7 @@
 </div>
 </div>
 <aside class="notes">
-<p>Quarto can make very flexible websites, or books which are a a Quarto website that can be rendered to Word, ePub, etc., blogs with listings and posts and RSS feeds, Quarto has deep feature set for presentations with reveal.js optimized for scientific content, and of course, publishing for journals.</p>
+<p>Quarto can make very flexible websites, or books which are a a Quarto website that can be rendered to Word, ePub, etc., blogs with listings and posts and RSS feeds, Quarto has deep feature set for presentations with reveal.js optimized for scientific content, and of course, publishing for journals. There is custom format systems and the ability to flexibly adapt LaTeX templates.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -746,7 +781,7 @@
 <h3 id="knitr">knitr</h3>
 
 <img data-src="images/knitr-engine.png" class="r-stretch"><aside class="notes">
-<p>This is the underlying structure that creates documents from the source, the Quarto markdown file or the QMD file. When we render a Quarto document, first, the knitr engine executes all of the code chunks and generates an intermediary markdown file that includes both the code and code output. Then that markdown file is processed by pandoc to create the finished document. Since it uses knitr, most Rmd files can be used unmodified.</p>
+<p>An engine is the tool that runs code. This is the underlying structure that creates documents from the source, the Quarto markdown file or the QMD file. When we render a Quarto document, first, the knitr engine executes all of the code chunks and generates an intermediary markdown file that includes both the code and code output. Then that markdown file is processed by pandoc to create the finished document. Since Quarto uses knitr, most Rmd files can be used unmodified.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -818,7 +853,7 @@
 <h3 id="jupyter">Jupyter</h3>
 
 <img data-src="images/jupyter-engine.png" class="r-stretch"><aside class="notes">
-<p>The structure is similar for Jupyter, we just are running documents natively through the Jupyter engine. Right now, there’s a lot of Quarto functionality for Python and Julia through Jupyter. But, this is part of the multilingualism that we discussed earlier, where you can keep adding languages if you swap out different engines. This also means you can have a shared syntax and format across languages, since the backend is the same.</p>
+<p>The structure is similar for Jupyter, we just are running documents natively through the Jupyter engine. Like R Marukdown, you can render Jupyter notebooks with Quarto, too. Jupyter will support any other language that has a Jupyter kernal, and right now, there’s a lot of Quarto functionality for Python and Julia through Jupyter. But, this is part of the multilingualism that we discussed earlier, where you can keep adding languages if you swap out different engines. This also means you can have a shared syntax and format across languages, since the backend is the same.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -879,7 +914,7 @@
 <li>Native support for Observable JS</li>
 <li>Reactive runtime for interactive data analysis</li>
 </ul>
-<p><a href="https://quarto.org/docs/computations/ojs.html#example" target="_blank">Observable Demo</a></p>
+<p><a href="https://quarto.org/docs/computations/ojs.html#example" data-preview-link="true">Observable Demo</a></p>
 <aside class="notes">
 <p>Quarto has native support for Observable JS, a set of enhancements to vanilla JS. It has reactive runtime, so you can interactively work with data within your Quarto document. There are other options too, like htmlwidgets and Shiny for Python.</p>
 <style type="text/css">
@@ -900,16 +935,15 @@
 <div>
 <ul>
 <li class="fragment">R Markdown has a lot of packages doing lots of different things</li>
+</ul>
+<p><img data-src="images/hexes.png"></p>
+<ul>
 <li class="fragment">Quarto has a shared expression for core features</li>
 </ul>
 </div>
-<div class="fragment">
-<p>Example: Theming</p>
-<ul>
-<li>Universal theming system based on SCSS for all HTML output</li>
-</ul>
+<p><img data-src="images/quarto.png"></p>
 <aside class="notes">
-<p>Quarto has a shared expression for core features. For example, Quarto has a universal theming system based on SCSS for all HTML output where core variables defined by bslib and so it is compatible with Shiny, flexdashboard, and R Markdown themes.</p>
+<p>So this is all good and well, but you may be wondering should you switch to Quarto if you already have another tool that you really like, you may be wondering whether or not you should switch. Here are some considerations. Quarto has a shared expression for core features. If you used the packages from the R Markdown ecosystem, then you may have had to switch between different ways of doing the same thing. In Quarto, you have a shared core syntax that is the same across all formats. Things like tabset, code folding, cross references in the same way. Another example is that Quarto has a universal theming system based on SCSS for all HTML output where core variables defined by bslib and so it is compatible with Shiny, flexdashboard, and R Markdown themes. So, users can create very consistent and organized theming across content.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -921,7 +955,6 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</div>
 </section>
 <section id="why-quarto-1" class="slide level2 scrollable">
 <h2>Why Quarto?</h2>
@@ -994,8 +1027,7 @@
 </div>
 </div>
 <aside class="notes">
-<p>Quarto also supports extensions</p>
-<p>Quarto extensions are written in Lua, meaning that they are not language specific. So, you can use the same extension in a Jupyter file or a knitr file.</p>
+<p>Quarto also supports extensions. Quarto extensions are written in Lua, meaning that they are not language specific. So, you can use the same extension in a Jupyter file or a knitr file. Shortcodes let you add content, like fontawesome icons that you have seen in this presentation, or videos from YouTube. Filters let you add new markdown syntax for extended features. And formats are custom formats. There are built in extensions and then community built ones, if you search for Awesome Quarto, there are a list of them there.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1044,6 +1076,19 @@
 <h2>Quarto Installation</h2>
 <p><img data-src="download-quarto.png"></p>
 
+<aside class="notes">
+<p>When you download the Quarto CLI, though, that’s all you need to run Quarto, so you can use just your Terminal or Command Line Interface for everything that we’ll explore, but you will need to install the engines if you’re going to run code with the CLI.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 <aside><div>
 <p>quarto.org</p>
 </div></aside></section>
@@ -1075,7 +1120,7 @@
 </div>
 <aside class="notes">
 <p>Part of the multilingualism of Quarto is that you are not tied to one tool. Quarto is meant for collaboration either within data science teams or across data science teams. So if someone is familiar with Jupyter Lab, but someone else likes to work in RStudio, they can still work on the same Quarto documents without having to switch to one tool or the other.</p>
-<p>For RStudio users, Quarto is bundled and preinstalled with v2022.07 and later. We didn’t want to limit Quarto enhancements to just RStudio. VS Code has an extension so you can YAML completion and linting and other features for writing Quarto documents.</p>
+<p>For RStudio users, Quarto is bundled and preinstalled with v2022.07 and later. There are a lot of features that are built into RStudio for Quarto documents. We didn’t want to limit Quarto enhancements to just RStudio. VS Code has an extension so you can YAML completion and linting and other features for writing Quarto documents, and you can preview documents in Jupyter Notebooks and Jupyter Labs.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1119,7 +1164,7 @@
 <p>Let’s try it!</p>
 </div>
 <aside class="notes">
-<p>Quarto has YAML intelligence in RStudio and VS code. YAML intelligence means completion and diagnostics for errors, and its’ available for project files, YAML front matter, and executable cell options. This makes it easy to write YAML and see</p>
+<p>Quarto has YAML intelligence in RStudio and VS code. YAML intelligence means completion and diagnostics for errors, and its’ available for project files, YAML front matter, and executable cell options. This makes it easy to write YAML and see what has gone wrong rather than getting error messages that are really hard to decipher.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1247,6 +1292,7 @@
 <div style="color: #9054FF">
 <p>Let’s try it!</p>
 </div>
+<p><a href="https://quarto.org/docs/reference/formats/html.html" data-preview-link="true">All YAML fields for HTML documents</a></p>
 </div>
 </section>
 <section id="code-chunks" class="slide level2 small">
@@ -1379,18 +1425,28 @@
 <h3 id="cross-referencing">Cross referencing</h3>
 <div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-penguins</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Penguin Plot"</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>See @fig-penguins.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Flipper and bill length"</span>,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for penguins at Palmer Station LTER"</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Penguin species"</span>, <span class="at">shape =</span> <span class="st">"Penguin species"</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>See @fig-penguins.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+<section id="code-chunks-6" class="slide level2">
+<h2>Code Chunks</h2>
+<h3 id="cross-referencing-1">Cross referencing</h3>
+
+<img data-src="images/cross-ref.png" class="r-stretch quarto-figure-center"></section>
 <section id="multiple-figures" class="slide level2">
 <h2>Multiple Figures</h2>
 <p>Put two plots side by side:</p>
@@ -1428,9 +1484,6 @@
 
 <img data-src="images/side-plots.png" class="r-stretch"></section>
 <section id="multiple-figures-2" class="slide level2">
-<h2>Multiple Figures</h2>
-</section>
-<section id="multiple-figures-3" class="slide level2">
 <h2>Multiple Figures</h2>
 <p>Put two plots side by side:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
@@ -1491,14 +1544,14 @@
 <h2>Code Options for All Chunks</h2>
 <h3 id="code-folding">Code Folding</h3>
 <div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href="#cb14-1"></a>---</span>
-<span id="cb14-2"><a href="#cb14-2"></a>title: "Quarto Computations"</span>
+<span id="cb14-2"><a href="#cb14-2"></a>title: "Hello, Quarto!"</span>
 <span id="cb14-3"><a href="#cb14-3"></a>format:</span>
 <span id="cb14-4"><a href="#cb14-4"></a>  html:</span>
 <span id="cb14-5"><a href="#cb14-5"></a>    code-fold: true</span>
 <span id="cb14-6"><a href="#cb14-6"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h3 id="code-tools">Code Tools</h3>
 <div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a href="#cb15-1"></a>---</span>
-<span id="cb15-2"><a href="#cb15-2"></a>title: "Quarto Computations"</span>
+<span id="cb15-2"><a href="#cb15-2"></a>title: "Hello, Quarto!"</span>
 <span id="cb15-3"><a href="#cb15-3"></a>format:</span>
 <span id="cb15-4"><a href="#cb15-4"></a>  html:</span>
 <span id="cb15-5"><a href="#cb15-5"></a>    code-tools:</span>
@@ -1510,12 +1563,13 @@
 <h3 id="code-linking">Code Linking</h3>
 <p><strong>Needs downlit package</strong></p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a href="#cb16-1"></a>---</span>
-<span id="cb16-2"><a href="#cb16-2"></a>title: "Quarto Computations"</span>
+<span id="cb16-2"><a href="#cb16-2"></a>title: "Hello, Quarto!"</span>
 <span id="cb16-3"><a href="#cb16-3"></a>format:</span>
 <span id="cb16-4"><a href="#cb16-4"></a>  html:</span>
 <span id="cb16-5"><a href="#cb16-5"></a>    code-link: true</span>
 <span id="cb16-6"><a href="#cb16-6"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<aside class="notes">
+
+<img data-src="images/rstudio-code-link-preview.png" class="r-stretch"><aside class="notes">
 <p>You might want to fold it and allow readers to view it at their discretion. You can do this via the code-fold option. Remove the echo option we previously added and add the code-fold HTML format option.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1736,6 +1790,7 @@ The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io
 <div style="color: #FF66C4">
 <p>Let’s try it!</p>
 </div>
+<p><a href="https://quarto.org/docs/authoring/markdown-basics.html" data-preview-link="true">Quarto guide for Markdown basics</a></p>
 </div>
 </section>
 <section id="quarto-authoring" class="slide level2 small">
@@ -1767,6 +1822,19 @@ The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io
 </div>
 </div>
 </div>
+<aside class="notes">
+<p>There is also native support for diagrams, where the syntax is similar as R or Python where the execution is being run by Quarto. This is a Mermaid diagram, which is a newer project supported on GitHub where you can use it in their documents as well, so it’s a pretty handy tool to get to know.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="quarto-authoring-1" class="slide level2">
 <h2>Quarto Authoring</h2>
@@ -1827,6 +1895,17 @@ The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io
 <span id="cb31-4" class="hljs-ln-code"><a href="#cb31-4"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
 <span id="cb31-5" class="hljs-ln-code"><a href="#cb31-5"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span>
 <span id="cb31-6" class="hljs-ln-code"><a href="#cb31-6"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<div style="color: #C04483">
+<p>Let’s try it!</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><embed data-src="https://quarto.org/docs/authoring/title-blocks.html#metadata-labels"></p>
+<p></p><figcaption>All title block metadata</figcaption><p></p>
+</figure>
+</div>
+</div>
 </section>
 <section id="divs-and-spans" class="slide level2">
 <h2>Divs and Spans</h2>
@@ -1874,7 +1953,7 @@ This content can be styled with a border
 </div>
 </div>
 <aside class="notes">
-<p>Pandoc and therefore Quarto can parse fenced Div blocks, which lets you modify the structure of your documents. You can add classes, attributes, and other identifiers to regions of content using Divs and Spans. You can think of divs as HTML divs but can be applied in PDFs or other formats like Word.</p>
+<p>Pandoc and therefore Quarto can parse fenced Div blocks, which lets you modify the structure of your documents. You can add classes, attributes, and other identifiers to regions of content using Divs and Spans. You can think of divs as HTML divs but can be applied in PDFs or other formats like Word. Here is an example of a call out, which calls out special content for readers and you may have seen them in books or papers. Quarto has this for all different formats using Divs.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -2083,6 +2162,70 @@ This content can be styled with a border
 <p>Let’s try it!</p>
 </div>
 </div>
+</section>
+<section id="revealjs-1" class="slide level2">
+<h2>Revealjs</h2>
+<h3 id="code-line-numbers">Code Line Numbers</h3>
+<div class="sourceCode" id="cb45"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb45-1"><a href="#cb45-1"></a><span class="in">```{r}</span></span>
+<span id="cb45-2"><a href="#cb45-2"></a><span class="co">#| echo: true</span></span>
+<span id="cb45-3"><a href="#cb45-3"></a><span class="co">#| eval: FALSE</span></span>
+<span id="cb45-4"><a href="#cb45-4"></a><span class="co">#| code-line-numbers: 3-4</span></span>
+<span id="cb45-5"><a href="#cb45-5"></a></span>
+<span id="cb45-6"><a href="#cb45-6"></a><span class="fu">ggplot</span>(penguins, </span>
+<span id="cb45-7"><a href="#cb45-7"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb45-8"><a href="#cb45-8"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
+<span id="cb45-9"><a href="#cb45-9"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) </span>
+<span id="cb45-10"><a href="#cb45-10"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46" data-code-line-numbers="3-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">ggplot</span>(penguins, </span>
+<span id="cb46-2"><a href="#cb46-2"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb46-3"><a href="#cb46-3"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
+<span id="cb46-4"><a href="#cb46-4"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<aside class="notes">
+<p>Most of the core capabilities of Quarto HTML Code Blocks are available for Reveal slides, including code folding, code copy, and the ability to pick a custom syntax highlighting theme. Revealjs also has some functionality not available in documents, such as code-line-highlighting, which lets you highlight specific lines of code output or highlight distinct lines over a progression of steps.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="revealjs-2" class="slide level2">
+<h2>Revealjs</h2>
+<h3 id="incremental">Incremental</h3>
+<div class="sourceCode" id="cb47"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy"><code class="sourceCode"><span id="cb47-1"><a href="#cb47-1"></a>::: {.incremental}</span>
+<span id="cb47-2"><a href="#cb47-2"></a>- Adelie</span>
+<span id="cb47-3"><a href="#cb47-3"></a>- Chinstrap</span>
+<span id="cb47-4"><a href="#cb47-4"></a>- Gentoo</span>
+<span id="cb47-5"><a href="#cb47-5"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<ul>
+<li class="fragment">Adelie</li>
+<li class="fragment">Chinstrap</li>
+<li class="fragment">Gentoo</li>
+</ul>
+</div>
+<p><a href="https://quarto.org/docs/presentations/revealjs/" data-preview-link="true">All about revealjs in Quarto</a></p>
+<aside class="notes">
+<p>By default number and bullet lists within slides are displayed all at once. You can override this globally using the incremental option.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
 <section class="title-slide slide level1 agenda-slide center">
@@ -2148,21 +2291,21 @@ This content can be styled with a border
 </section>
 <section id="quarto-projects-1" class="slide level2">
 <h2>Quarto Projects</h2>
-<div class="sourceCode" id="cb45"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb45-1"><a href="#cb45-1"></a>project:</span>
-<span id="cb45-2"><a href="#cb45-2"></a>  output-dir: _output</span>
-<span id="cb45-3"><a href="#cb45-3"></a></span>
-<span id="cb45-4"><a href="#cb45-4"></a>toc: true</span>
-<span id="cb45-5"><a href="#cb45-5"></a>number-sections: true</span>
-<span id="cb45-6"><a href="#cb45-6"></a>bibliography: references.bib  </span>
-<span id="cb45-7"><a href="#cb45-7"></a>  </span>
-<span id="cb45-8"><a href="#cb45-8"></a>format:</span>
-<span id="cb45-9"><a href="#cb45-9"></a>  html:</span>
-<span id="cb45-10"><a href="#cb45-10"></a>    css: styles.css</span>
-<span id="cb45-11"><a href="#cb45-11"></a>    html-math-method: katex</span>
-<span id="cb45-12"><a href="#cb45-12"></a>  pdf:</span>
-<span id="cb45-13"><a href="#cb45-13"></a>    documentclass: report</span>
-<span id="cb45-14"><a href="#cb45-14"></a>    margin-left: 30mm</span>
-<span id="cb45-15"><a href="#cb45-15"></a>    margin-right: 30mm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb48-1"><a href="#cb48-1"></a>project:</span>
+<span id="cb48-2"><a href="#cb48-2"></a>  output-dir: _output</span>
+<span id="cb48-3"><a href="#cb48-3"></a></span>
+<span id="cb48-4"><a href="#cb48-4"></a>toc: true</span>
+<span id="cb48-5"><a href="#cb48-5"></a>number-sections: true</span>
+<span id="cb48-6"><a href="#cb48-6"></a>bibliography: references.bib  </span>
+<span id="cb48-7"><a href="#cb48-7"></a>  </span>
+<span id="cb48-8"><a href="#cb48-8"></a>format:</span>
+<span id="cb48-9"><a href="#cb48-9"></a>  html:</span>
+<span id="cb48-10"><a href="#cb48-10"></a>    css: styles.css</span>
+<span id="cb48-11"><a href="#cb48-11"></a>    html-math-method: katex</span>
+<span id="cb48-12"><a href="#cb48-12"></a>  pdf:</span>
+<span id="cb48-13"><a href="#cb48-13"></a>    documentclass: report</span>
+<span id="cb48-14"><a href="#cb48-14"></a>    margin-left: 30mm</span>
+<span id="cb48-15"><a href="#cb48-15"></a>    margin-right: 30mm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>Within a Quarto project, you can render all the files at once or specify specific ones to render. So, say you have a website and you want to change the theme throughout, rather than rendering individual pages you can do that all with one command in a project. Quarto projects also include a _quarto.yml configuration file so that every document in the project inherits the metadata in that file. So, if you think about a blog, you probably want all your posts to have the same theme. If you use the Quarto command for making a new blog, it will automatically be a project, and you can configure the theme for all pages in the _quarto.yml file.</p>
 <style type="text/css">
@@ -2180,11 +2323,11 @@ This content can be styled with a border
 <section id="quarto-projects-2" class="slide level2">
 <h2>Quarto Projects</h2>
 <h3 id="freeze">Freeze</h3>
-<div class="sourceCode" id="cb46"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb46-1"><a href="#cb46-1"></a>execute:</span>
-<span id="cb46-2"><a href="#cb46-2"></a>  freeze: true  # never re-render during project render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb49-1"><a href="#cb49-1"></a>execute:</span>
+<span id="cb49-2"><a href="#cb49-2"></a>  freeze: true  # never re-render during project render</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb47-1"><a href="#cb47-1"></a>execute:</span>
-<span id="cb47-2"><a href="#cb47-2"></a>  freeze: auto  # re-render only when source changes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb50-1"><a href="#cb50-1"></a>execute:</span>
+<span id="cb50-2"><a href="#cb50-2"></a>  freeze: auto  # re-render only when source changes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>Rendering a bunch of files can be quite time consuming depending on the computations required. The freeze option specifies if computational documents should never be re-rendered during a global project render, or only be re-rendered when their source file changes. Freeze can used when you have either a large number of collaborators or many computational documents created over a long period of time. In these cases, it can be challenging to fully re-execute every document when you render the site. This could be because some documents have environment-specific requirements or one of your teammates wrote something in Python, which you don’t have installed. Using freeze ensures that you can always reproducibly render your site.</p>
 <style type="text/css">
@@ -2266,9 +2409,9 @@ This content can be styled with a border
 <section id="html-theming-1" class="slide level2">
 <h2>HTML Theming</h2>
 <p>Use these themes under the <code>theme</code> option in the YAML:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb48-1"><a href="#cb48-1"></a>format:</span>
-<span id="cb48-2"><a href="#cb48-2"></a>  html:</span>
-<span id="cb48-3"><a href="#cb48-3"></a>    theme: flatly</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb51-1"><a href="#cb51-1"></a>format:</span>
+<span id="cb51-2"><a href="#cb51-2"></a>  html:</span>
+<span id="cb51-3"><a href="#cb51-3"></a>    theme: flatly</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -2286,21 +2429,21 @@ This content can be styled with a border
 <ul>
 <li>Bootstrap defines over 1,400 variables that control fonts, colors, padding, borders, and much more!</li>
 </ul>
-<div class="sourceCode" id="cb49"><pre class="sourceCode numberSource {{css}} number-lines code-with-copy"><code class="sourceCode"><span id="cb49-1"><a href="#cb49-1"></a>/*-- scss:defaults --*/</span>
-<span id="cb49-2"><a href="#cb49-2"></a></span>
-<span id="cb49-3"><a href="#cb49-3"></a>$body-bg: #CDEEFD;</span>
-<span id="cb49-4"><a href="#cb49-4"></a></span>
-<span id="cb49-5"><a href="#cb49-5"></a>/*-- scss:rules --*/</span>
-<span id="cb49-6"><a href="#cb49-6"></a>h1, h2, h3, h4, h5, h6 {</span>
-<span id="cb49-7"><a href="#cb49-7"></a>  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);</span>
-<span id="cb49-8"><a href="#cb49-8"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode numberSource {{css}} number-lines code-with-copy"><code class="sourceCode"><span id="cb52-1"><a href="#cb52-1"></a>/*-- scss:defaults --*/</span>
+<span id="cb52-2"><a href="#cb52-2"></a></span>
+<span id="cb52-3"><a href="#cb52-3"></a>$body-bg: #CDEEFD;</span>
+<span id="cb52-4"><a href="#cb52-4"></a></span>
+<span id="cb52-5"><a href="#cb52-5"></a>/*-- scss:rules --*/</span>
+<span id="cb52-6"><a href="#cb52-6"></a>h1, h2, h3, h4, h5, h6 {</span>
+<span id="cb52-7"><a href="#cb52-7"></a>  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);</span>
+<span id="cb52-8"><a href="#cb52-8"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="html-theming-3" class="slide level2">
 <h2>HTML Theming</h2>
 <p>Provide the custom theme under <code>theme</code>:</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb50-1"><a href="#cb50-1"></a>theme:</span>
-<span id="cb50-2"><a href="#cb50-2"></a>  - flatly</span>
-<span id="cb50-3"><a href="#cb50-3"></a>  - custom.scss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb53-1"><a href="#cb53-1"></a>theme:</span>
+<span id="cb53-2"><a href="#cb53-2"></a>  - flatly</span>
+<span id="cb53-3"><a href="#cb53-3"></a>  - custom.scss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p><img data-src="images/theme-3.png" width="300"></p>
 </div>
@@ -2308,9 +2451,9 @@ This content can be styled with a border
 <section id="html-theming-4" class="slide level2">
 <h2>HTML Theming</h2>
 <p>Quarto also allows you to use a dark and light theme.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb51-1"><a href="#cb51-1"></a>theme:</span>
-<span id="cb51-2"><a href="#cb51-2"></a>  light: flatly</span>
-<span id="cb51-3"><a href="#cb51-3"></a>  dark: darkly</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb54-1"><a href="#cb54-1"></a>theme:</span>
+<span id="cb54-2"><a href="#cb54-2"></a>  light: flatly</span>
+<span id="cb54-3"><a href="#cb54-3"></a>  dark: darkly</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -2364,8 +2507,21 @@ This content can be styled with a border
 <li>RStudio Connect</li>
 <li>Netlify</li>
 </ul>
+<aside class="notes">
+<p>There’s an integrated quarto publish command that lets you publish in a bunch of places.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="quarto-pub" class="slide level2">
+<section id="quarto-pub" class="slide level2 small">
 <h2>Quarto Pub</h2>
 <p>Quarto Pub is a free publishing service for content created with Quarto.</p>
 <ul>
@@ -2377,7 +2533,18 @@ This content can be styled with a border
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="sourceCode" id="cb52"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1"></a><span class="ex">quarto</span> publish quarto-pub hello.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1"></a><span class="ex">quarto</span> publish quarto-pub hello.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><a href="#cb56-1"></a><span class="co"># token created at https://quartopub.com/profile/</span></span>
+<span id="cb56-2"><a href="#cb56-2"></a><span class="bu">export</span> <span class="va">QUARTO_PUB_AUTH_TOKEN</span><span class="op">=</span><span class="st">"qpa_k4yWKEmlu5wkvx173Ls"</span></span>
+<span id="cb56-3"><a href="#cb56-3"></a></span>
+<span id="cb56-4"><a href="#cb56-4"></a><span class="co"># publish to quarto-pub site specified within _publish.yml</span></span>
+<span id="cb56-5"><a href="#cb56-5"></a><span class="ex">quarto</span> publish quarto-pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div style="color: #C04483">
@@ -2423,7 +2590,7 @@ This content can be styled with a border
 <ul>
 <li>Keep in touch on Twitter: <i class="fa-brands fa-twitter fa-1.4xl" aria-label="twitter"></i> <a href="https://twitter.com/ivelasq3">ivelasq3</a>.</li>
 <li>Read the <a href="https://quarto.org/">Quarto documentation</a>.</li>
-<li>We have six <a href="https://www.rstudio.com/blog/6-productivity-hacks-for-quarto/">productivity hacks</a> you may like!</li>
+<li>Check out <a href="https://github.com/mcanouil/awesome-quarto">Awesome Quarto</a>.</li>
 <li>Find a great repository of Quarto resources at <a href="https://github.com/mcanouil/awesome-quarto">Awesome Quarto</a>.</li>
 </ul>
 </section>
@@ -2433,10 +2600,17 @@ This content can be styled with a border
 <li><a href="https://occasionaldivergences.com/posts/quarto-questions/">Quarto questions</a> by Marc Dotson</li>
 <li><a href="https://emilhvitfeldt.github.io/useR2022-textrecipes/#/section">Improvements in text processing using textrecipes</a> by Emil Hvitfeldt</li>
 </ul>
+</section>
+<section id="quarto-in-100-seconds" class="slide level2 r-stretch">
+<h2>Quarto in 100 seconds</h2>
+<p></p><div id="youtube-frame" style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;"><iframe width="100%" height="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/_20US068pzk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div><p></p>
+
 <div class="footer footer-default">
 <p>https://ivelasq.quarto.pub/intro-to-quarto/</p>
 </div>
-</section></section>
+<aside><div>
+<p>Source: xvzf on YouTube</p>
+</div></aside></section></section>
     </div>
   </div>
 
@@ -2648,6 +2822,44 @@ This content can be styled with a border
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

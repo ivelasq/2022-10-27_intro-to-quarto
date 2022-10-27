@@ -26,6 +26,11 @@ Isabella Velásquez
 
 R-Ladies St. Louis
 
+
+::: notes
+Hi everybody! Thank you so much for joining today's session. I am so excited to introduce Quarto and many thanks to Laura and the R-Ladies St. Louis co-organizers for having me today.
+:::
+
 # Introduction {.r-stretch}
 
 ## Hello!
@@ -37,7 +42,7 @@ My name is Isabella Velásquez.
 ![](images/intro.png){fig-align="center"}
 
 ::: notes
-Digital illustration beginner :)
+My name is Isabella Velásquez. I work at RStudio, soon to be Posit, and have been an R user for many years. I am a co-organizer for R-Ladies Seattle, as well. Just a bit about me, I am an avid hiker and love cats, especially my cat, Kitty. I am also a digital illustration beginner, as you will see in my presentation today.
 :::
 
 ## Instructions {.small}
@@ -62,15 +67,7 @@ To follow along with the exercises, please be sure that you:
 :::
 
 ::: notes
-You have a few options of how to attend this session. One option is that you have a local copy of the exercises already, and when we get to the different sections you can follow along with what I am doing. Another option is that you go into the rstudio.cloud project to follow along. But, please feel free to just watch the session and try things out on your own afterwards. The slides, repository, and project will stay up so that you can try things out on your own time. One other thing to note is that Quarto has a lot of options for creating content, so I added some reference materials in the exercise README so that you can play around with other options other than the ones I show you.
-:::
-
-## Quarto in 100 seconds {.r-stretch}
-
-{{< youtube _20US068pzk >}}
-
-::: aside
-Source: xvzf on YouTube
+You have a few options of how to attend this session. On the README file of the GitHub repo for this session is a list of instructions and a link to the exercise repo. One option is that you have a local copy of the exercises already, and when we get to the different sections you can follow along with what I am doing on your own RStudio. Another option is that you sign up for RStudio Cloud and go into the project to follow along. It is also linked in the instructions. One benefit of this is that you don't have to have RStudio installed on your computer and the project is ready, the packages are installed for you, and you can save a copy of your work if you would like. But, please feel free to just watch the session and try things out on your own afterwards. The slides, repositories, and project will stay up so that you can try things out on your own time. One other thing to note is that Quarto has a lot of options for creating content, so I added some reference materials in the exercise repo README so that you can play around with other options other than the ones I show you.
 :::
 
 # About [Quarto]{.flow} {.r-stretch}
@@ -103,8 +100,8 @@ built on Pandoc.
 Quarto is an open-source scientific and technical publishing system built on Pandoc. Let’s break this down: 
 Open-source: RStudio believes that it’s better for everyone if the tools used for research and science are free and open. Free software means more reproducibility, widespread sharing of knowledge and techniques, and elimination of cost barriers. You can also see the source code and contribute, too.
 Scientific and technical: Scientific and technical means that Quarto has specific things for journal articles or scientific papers, like support for code execution, citations, footnotes, scientific markdown, equations, citations, crossrefs, so many things. We’ll be showing some of these later on, but Quarto definitely has the scientific publishing audience in mind.
-Publishing system: Quarto is a command line interface that creates dynamic content with Python, R, Julia, and Observable. Quarto takes rendered plain text like R Markdown files or mixed formats like Jupyter notebooks to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats.
-Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format. Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write. We'll cover this as well.
+Publishing system: Quarto is a tool for writing dynamic documents that combine code, output, and text. It can embed output from Python, R, Julia, and Observable. Quarto can be rendered to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats.
+Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format.Quarto documents are authored with markdown, which is a plain text format. But Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write. We'll cover this as well.
 :::
 
 ## Quarto Origins
@@ -124,7 +121,7 @@ Check out [JJ Allaire's R Medicine Keynote](https://www.youtube.com/watch?v=9jGc
 :::
 
 :::{.notes}
-R Markdown is a file format for making dynamic documents with R.
+R Markdown is a file format for making dynamic documents with R. However, you need to call it from R to use it, and it was depedentn on knitr. If you're a Python user, it means you need to install R to use R Markdown. Quarto is a tool that you can call from the terminal or command line, and is independent from the computational systems. Quarto supports knitr, and can support others. So, you can think of Quarto as the next generation R Markdown that is fundamentally multilanguage and multiengine.
 :::
 
 ## Quarto Goals
@@ -137,6 +134,10 @@ R Markdown is a file format for making dynamic documents with R.
 
 ::: aside
 Check out [JJ Allaire's R Medicine Keynote](https://www.youtube.com/watch?v=9jGc0TxoRco)!
+:::
+
+::: notes
+So the goals are to create these dynamic documents that can be reproducible and automated. [story about building documents]. For single-source publishing, you often need to create all sorts of output, like things that are printed, on the web, on the mobile. The idea is to being able to make publications from one source.
 :::
 
 ## A new tool for literate programming
@@ -160,7 +161,7 @@ Check out [JJ Allaire's R Medicine Keynote](https://www.youtube.com/watch?v=9jGc
 :::
 
 :::{.notes}
-Quarto sits inside the literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. [click] There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!
+Quarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. [click] There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!
 :::
 
 ## Why a new system?
@@ -173,6 +174,11 @@ Quarto sits inside the literate programming world, which mixes narrative in text
 . . .
 
 Let's bring R Markdown to everybody!
+
+:::{.notes}
+So, if there already exist literate programming tools out there, why create a new one, especially since RStudio is also behind R Markdown? Like mentioned earlier, Quarto was built from the start to support multiple computational systems and ecosystems. This new system brings R Markdown to everybody.
+:::
+
 
 ## Why is it called "Quarto"?
 
@@ -223,7 +229,7 @@ According to the website, the developers wanted to use a name that had meaning i
 :::
 
 ::: notes
-Quarto can make very flexible websites, or books which are a a Quarto website that can be rendered to Word, ePub, etc., blogs with listings and posts and RSS feeds, Quarto has deep feature set for presentations with reveal.js optimized for scientific content, and of course, publishing for journals.
+Quarto can make very flexible websites, or books which are a a Quarto website that can be rendered to Word, ePub, etc., blogs with listings and posts and RSS feeds, Quarto has deep feature set for presentations with reveal.js optimized for scientific content, and of course, publishing for journals. There is custom format systems and the ability to flexibly adapt LaTeX templates.
 :::
 
 ## Quarto Engines
@@ -233,7 +239,7 @@ Quarto can make very flexible websites, or books which are a a Quarto website th
 ![](images/knitr-engine.png)
 
 ::: notes
-This is the underlying structure that creates documents from the source, the Quarto markdown file or the QMD file. When we render a Quarto document, first, the knitr engine executes all of the code chunks and generates an intermediary markdown file that includes both the code and code output. Then that markdown file is processed by pandoc to create the finished document. Since it uses knitr, most Rmd files can be used unmodified.
+An engine is the tool that runs code. This is the underlying structure that creates documents from the source, the Quarto markdown file or the QMD file. When we render a Quarto document, first, the knitr engine executes all of the code chunks and generates an intermediary markdown file that includes both the code and code output. Then that markdown file is processed by pandoc to create the finished document. Since Quarto uses knitr, most Rmd files can be used unmodified.
 :::
 
 ------------------------------------------------------------------------
@@ -292,7 +298,7 @@ This is a Quarto document with the extension .qmd (on the left) along with its r
 ![](images/jupyter-engine.png)
 
 ::: notes
-The structure is similar for Jupyter, we just are running documents natively through the Jupyter engine. Right now, there's a lot of Quarto functionality for Python and Julia through Jupyter. But, this is part of the multilingualism that we discussed earlier, where you can keep adding languages if you swap out different engines. This also means you can have a shared syntax and format across languages, since the backend is the same.
+The structure is similar for Jupyter, we just are running documents natively through the Jupyter engine. Like R Marukdown, you can render Jupyter notebooks with Quarto, too. Jupyter will support any other language that has a Jupyter kernal, and right now, there's a lot of Quarto functionality for Python and Julia through Jupyter. But, this is part of the multilingualism that we discussed earlier, where you can keep adding languages if you swap out different engines. This also means you can have a shared syntax and format across languages, since the backend is the same.
 :::
 
 ------------------------------------------------------------------------
@@ -347,7 +353,7 @@ The structure is similar for Jupyter, we just are running documents natively thr
 -   Native support for Observable JS
 -   Reactive runtime for interactive data analysis
 
-<a href="https://quarto.org/docs/computations/ojs.html#example" target = "_blank">Observable Demo</a>
+[Observable Demo](https://quarto.org/docs/computations/ojs.html#example){preview-link="true"}
 
 ::: notes
 Quarto has native support for Observable JS, a set of enhancements to vanilla JS. It has reactive runtime, so you can interactively work with data within your Quarto document. There are other options too, like htmlwidgets and Shiny for Python.
@@ -359,18 +365,16 @@ Quarto has native support for Observable JS, a set of enhancements to vanilla JS
 
 ::: incremental
 -   R Markdown has a lot of packages doing lots of different things
+
+![](images/hexes.png)
+
 -   Quarto has a shared expression for core features
 :::
 
-. . .
-
-Example: Theming
-
--   Universal theming system based on SCSS for all HTML output
+![](images/quarto.png)
 
 :::{.notes}
-Quarto has a shared expression for core features.
-For example, Quarto has a universal theming system based on SCSS for all HTML output where core variables defined by bslib  and so it is compatible with Shiny, flexdashboard, and R Markdown themes.
+So this is all good and well, but you may be wondering should you switch to Quarto if you already have another tool that you really like, you may be wondering whether or not you should switch. Here are some considerations. Quarto has a shared expression for core features. If you used the packages from the R Markdown ecosystem, then you may have had to switch between different ways of doing the same thing. In Quarto, you have a shared core syntax that is the same across all formats. Things like tabset, code folding, cross references in the same way. Another example is that Quarto has a universal theming system based on SCSS for all HTML output where core variables defined by bslib  and so it is compatible with Shiny, flexdashboard, and R Markdown themes. So, users can create very consistent and organized theming across content.
 :::
 
 ## Why Quarto? {.scrollable}
@@ -416,9 +420,7 @@ R Markdown isn't going away but big new features will be in Quarto, things like 
 :::
 
 ::: notes
-Quarto also supports extensions
-
-Quarto extensions are written in Lua, meaning that they are not language specific. So, you can use the same extension in a Jupyter file or a knitr file.
+Quarto also supports extensions. Quarto extensions are written in Lua, meaning that they are not language specific. So, you can use the same extension in a Jupyter file or a knitr file. Shortcodes let you add content, like fontawesome icons that you have seen in this presentation, or videos from YouTube. Filters let you add new markdown syntax for extended features. And formats are custom formats. There are built in extensions and then community built ones, if you search for Awesome Quarto, there are a list of them there.
 :::
 
 # How to use [Quarto]{.flow} {.r-stretch}
@@ -429,6 +431,10 @@ Quarto extensions are written in Lua, meaning that they are not language specifi
 
 ::: aside
 quarto.org
+:::
+
+::: notes
+When you download the Quarto CLI, though, that's all you need to run Quarto, so you can use just your Terminal or Command Line Interface for everything that we'll explore, but you will need to install the engines if you're going to run code with the CLI.
 :::
 
 ## Quarto Tooling
@@ -450,7 +456,7 @@ quarto render
 ::: notes
 Part of the multilingualism of Quarto is that you are not tied to one tool. Quarto is meant for collaboration either within data science teams or across data science teams. So if someone is familiar with Jupyter Lab, but someone else likes to work in RStudio, they can still work on the same Quarto documents without having to switch to one tool or the other.
 
-For RStudio users, Quarto is bundled and preinstalled with v2022.07 and later. We didn't want to limit Quarto enhancements to just RStudio. VS Code has an extension so you can YAML completion and linting and other features for writing Quarto documents.
+For RStudio users, Quarto is bundled and preinstalled with v2022.07 and later. There are a lot of features that are built into RStudio for Quarto documents. We didn't want to limit Quarto enhancements to just RStudio. VS Code has an extension so you can YAML completion and linting and other features for writing Quarto documents, and you can preview documents in Jupyter Notebooks and Jupyter Labs.
 :::
 
 ## Working in RStudio {.small}
@@ -486,7 +492,7 @@ Let's try it!
 :::
 
 ::: notes
-Quarto has YAML intelligence in RStudio and VS code. YAML intelligence means completion and diagnostics for errors, and its' available for project files, YAML front matter, and executable cell options. This makes it easy to write YAML and see
+Quarto has YAML intelligence in RStudio and VS code. YAML intelligence means completion and diagnostics for errors, and its' available for project files, YAML front matter, and executable cell options. This makes it easy to write YAML and see what has gone wrong rather than getting error messages that are really hard to decipher.
 :::
 
 ## Working with the RStudio Visual Editor {.small}
@@ -563,6 +569,7 @@ editor: visual
 Let's try it!
 :::
 
+[All YAML fields for HTML documents](https://quarto.org/docs/reference/formats/html.html){preview-link="true"}
 
 ## Code Chunks {.small}
 
@@ -670,18 +677,29 @@ In addition to rendering the complete document to view the results of code chunk
 ````
 ```{{r}}
 #| label: fig-penguins
-#| fig-cap: "Penguin Plot"
 #| warning: false
 
 ggplot(penguins, 
        aes(x = flipper_length_mm, y = bill_length_mm)) +
   geom_point(aes(color = species, shape = species)) +
   scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for penguins at Palmer Station LTER",
+    x = "Flipper length (mm)", y = "Bill length (mm)",
+    color = "Penguin species", shape = "Penguin species"
+  ) +
   theme_minimal()
 ```
 
 See @fig-penguins.
 ````
+
+## Code Chunks
+
+### Cross referencing
+
+![](images/cross-ref.png){fig-align=center}
 
 ## Multiple Figures
 
@@ -713,8 +731,6 @@ Let’s add another plot to our chunk. Our goal is to display these plots side-b
 Put two plots side by side:
 
 ![](images/side-plots.png)
-
-## Multiple Figures
 
 ## Multiple Figures
 
@@ -787,7 +803,7 @@ execute:
 
 ```{{yaml}}
 ---
-title: "Quarto Computations"
+title: "Hello, Quarto!"
 format:
   html:
     code-fold: true
@@ -798,7 +814,7 @@ format:
 
 ```{{yaml}}
 ---
-title: "Quarto Computations"
+title: "Hello, Quarto!"
 format:
   html:
     code-tools:
@@ -814,12 +830,14 @@ format:
 
 ```{{yaml}}
 ---
-title: "Quarto Computations"
+title: "Hello, Quarto!"
 format:
   html:
     code-link: true
 ---
 ```
+
+![](images/rstudio-code-link-preview.png)
 
 ::: notes
 You might want to fold it and allow readers to view it at their discretion. You can do this via the code-fold option. Remove the echo option we previously added and add the code-fold HTML format option.
@@ -940,6 +958,8 @@ Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&ut
 Let's try it!
 :::
 
+[Quarto guide for Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html){preview-link="true"}
+
 ## Quarto Authoring {.small}
 
 ### Diagrams
@@ -955,6 +975,10 @@ flowchart LR
   C --> D[4]
   C --> E[5]
 ```
+
+::: notes
+There is also native support for diagrams, where the syntax is similar as R or Python where the execution is being run by Quarto. This is a Mermaid diagram, which is a newer project supported on GitHub where you can use it in their documents as well, so it's a pretty handy tool to get to know.
+:::
 
 ## Quarto Authoring
 
@@ -1027,6 +1051,15 @@ editor: visual
 ---
 ```
 
+. . .
+
+::: {style="color: #C04483"}
+Let's try it!
+:::
+
+
+![All title block metadata](https://quarto.org/docs/authoring/title-blocks.html#metadata-labels)
+
 ## Divs and Spans
 
 You can add classes, attributes, and other identifiers to content using Divs and Spans.
@@ -1078,7 +1111,7 @@ Note that there are five types of callouts, including: `note`, `tip`, `warning`,
 :::
 
 ::: notes
-Pandoc and therefore Quarto can parse fenced Div blocks, which lets you modify the structure of your documents. You can add classes, attributes, and other identifiers to regions of content using Divs and Spans. You can think of divs as HTML divs but can be applied in PDFs or other formats like Word. 
+Pandoc and therefore Quarto can parse fenced Div blocks, which lets you modify the structure of your documents. You can add classes, attributes, and other identifiers to regions of content using Divs and Spans. You can think of divs as HTML divs but can be applied in PDFs or other formats like Word. Here is an example of a call out, which calls out special content for readers and you may have seen them in books or papers. Quarto has this for all different formats using Divs.
 :::
 
 ---
@@ -1270,6 +1303,63 @@ editor: visual
 Let's try it!
 :::
 
+## Revealjs
+
+### Code Line Numbers
+
+````markdown
+```{{r}}
+#| echo: true
+#| eval: FALSE
+#| code-line-numbers: 3-4
+
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) 
+```
+````
+<br>
+```{r}
+#| echo: true
+#| eval: FALSE
+#| code-line-numbers: 3-4
+
+ggplot(penguins, 
+       aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point(aes(color = species, shape = species)) +
+  scale_color_manual(values = c("darkorange","purple","cyan4")) 
+```
+
+::: notes
+Most of the core capabilities of Quarto HTML Code Blocks are available for Reveal slides, including code folding, code copy, and the ability to pick a custom syntax highlighting theme. Revealjs also has some functionality not available in documents, such as code-line-highlighting, which lets you highlight specific lines of code output or highlight distinct lines over a progression of steps.
+:::
+
+## Revealjs
+
+### Incremental
+
+```{{markdown}}
+::: {.incremental}
+- Adelie
+- Chinstrap
+- Gentoo
+:::
+```
+
+::: {.incremental}
+- Adelie
+- Chinstrap
+- Gentoo
+:::
+
+
+[All about revealjs in Quarto](https://quarto.org/docs/presentations/revealjs/){preview-link="true"}
+
+::: notes
+By default number and bullet lists within slides are displayed all at once. You can override this globally using the incremental option.
+:::
+
 # Get Started with [Quarto]{.flow}
 
 ## Create a new document
@@ -1448,9 +1538,13 @@ Some options:
 * Quarto Pub
 * GitHub Pages
 * RStudio Connect
-* Netlify
+* Netlify   
 
-## Quarto Pub
+::: notes
+There's an integrated quarto publish command that lets you publish in a bunch of places.
+:::
+
+## Quarto Pub {.small}
 
 Quarto Pub is a free publishing service for content created with Quarto.
 
@@ -1460,6 +1554,14 @@ Quarto Pub is a free publishing service for content created with Quarto.
 
 ``` {.bash filename="Terminal"}
 quarto publish quarto-pub hello.qmd
+```
+<br>
+``` {.bash filename="Terminal"}
+# token created at https://quartopub.com/profile/
+export QUARTO_PUB_AUTH_TOKEN="qpa_k4yWKEmlu5wkvx173Ls"
+
+# publish to quarto-pub site specified within _publish.yml
+quarto publish quarto-pub
 ```
 
 . . .
@@ -1476,7 +1578,7 @@ I hope that you enjoyed this intro to Quarto!
 
 -   Keep in touch on Twitter: {{< fa brands twitter size=1.4xl >}} [ivelasq3](https://twitter.com/ivelasq3).
 -   Read the [Quarto documentation](https://quarto.org/).
--   We have six [productivity hacks](https://www.rstudio.com/blog/6-productivity-hacks-for-quarto/) you may like!
+-   Check out [Awesome Quarto](https://github.com/mcanouil/awesome-quarto).
 -   Find a great repository of Quarto resources at [Awesome Quarto](https://github.com/mcanouil/awesome-quarto).
 
 ## Acknowledgements
@@ -1484,3 +1586,10 @@ I hope that you enjoyed this intro to Quarto!
 -   [Quarto questions](https://occasionaldivergences.com/posts/quarto-questions/) by Marc Dotson
 -   [Improvements in text processing using textrecipes](https://emilhvitfeldt.github.io/useR2022-textrecipes/#/section) by Emil Hvitfeldt
 
+## Quarto in 100 seconds {.r-stretch}
+
+{{< youtube _20US068pzk >}}
+
+::: aside
+Source: xvzf on YouTube
+:::
