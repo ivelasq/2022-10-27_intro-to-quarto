@@ -1,6 +1,10 @@
 # Intro to Quarto
 ## 2022-10-27 R-Ladies St. Louis Presentation
 
+<!-- badges: start -->
+[![Launch RStudio Cloud](https://img.shields.io/badge/launch-cloud-75aadb?style=flat&logo=rstudio)](https://rstudio.cloud/project/4823293)
+<!-- badges: end -->
+
 ## Instructions
 
 Welcome to the Intro to Quarto workshop! You have two options if you would like to follow along with the exercises:
@@ -15,7 +19,7 @@ AND
 ## Follow along on rstudio.cloud
 
 * Please go to [rstudio.cloud](https://rstudio.cloud/) and create an account (it is free).
-* Ensure that you can access [this project](https://rstudio.cloud/content/4793228).
+* Ensure that you can access [this project](https://rstudio.cloud/content/4823293).
 
 ## Follow along on your Desktop
 
@@ -39,5 +43,5 @@ If you need to install Quarto v1.0:
 
 ### Clone the repository
 
-On Thursday, October 27th, please clone [this repository](https://github.com/ivelasq/intro-to-quarto-exercises) (please don't clone before Thursday!).
+On Thursday, October 27th, please clone [this repository](https://github.com/ivelasq/intro-to-quarto-exercises).
 
