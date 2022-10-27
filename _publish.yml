@@ -1,0 +1,4 @@
+- source: index.qmd
+  quarto-pub:
+    - id: d921b773-9227-4a74-9a56-17b1e20b4e82
+      url: 'https://quartopub.com/sites/ivelasq/intro-to-quarto'
