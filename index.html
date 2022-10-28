@@ -472,10 +472,7 @@
 <ul>
 <li class="fragment">Slides: <a href="https://ivelasq.quarto.pub/intro-to-quarto/" class="uri">https://ivelasq.quarto.pub/intro-to-quarto/</a></li>
 <li class="fragment">Session repo with instructions: <a href="https://github.com/ivelasq/2022-10-27_intro-to-quarto" class="uri">https://github.com/ivelasq/2022-10-27_intro-to-quarto</a></li>
-<li class="fragment">Exercise repo: <a href="https://github.com/ivelasq/intro-to-quarto-exercises" class="uri">https://github.com/ivelasq/intro-to-quarto-exercises</a>
-<ul>
-<li class="fragment"><a href="https://github.com/ivelasq/intro-to-quarto-exercises" data-preview-link="&quot;true">Resources</a></li>
-</ul></li>
+<li class="fragment">Exercise repo: <a href="https://github.com/ivelasq/intro-to-quarto-exercises" class="uri">https://github.com/ivelasq/intro-to-quarto-exercises</a></li>
 <li class="fragment">rstudio.cloud Project: <a href="https://rstudio.cloud/content/4823293" class="uri">https://rstudio.cloud/content/4823293</a></li>
 </ul>
 </div>
@@ -1420,27 +1417,28 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="code-chunks-5" class="slide level2">
+<section id="code-chunks-5" class="slide level2 small">
 <h2>Code Chunks</h2>
 <h3 id="cross-referencing">Cross referencing</h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-penguins</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, </span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Flipper and bill length"</span>,</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for penguins at Palmer Station LTER"</span>,</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Penguin species"</span>, <span class="at">shape =</span> <span class="st">"Penguin species"</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>See @fig-penguins.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="co">#| label: fig-penguins</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="co">#| warning: false</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="fu">ggplot</span>(penguins,</span>
+<span id="cb9-6"><a href="#cb9-6"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>, <span class="st">"purple"</span>, <span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-10"><a href="#cb9-10"></a>    <span class="at">title =</span> <span class="st">"Flipper and bill length"</span>,</span>
+<span id="cb9-11"><a href="#cb9-11"></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for penguins at Palmer Station LTER"</span>,</span>
+<span id="cb9-12"><a href="#cb9-12"></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>,</span>
+<span id="cb9-13"><a href="#cb9-13"></a>    <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
+<span id="cb9-14"><a href="#cb9-14"></a>    <span class="at">color =</span> <span class="st">"Penguin species"</span>,</span>
+<span id="cb9-15"><a href="#cb9-15"></a>    <span class="at">shape =</span> <span class="st">"Penguin species"</span></span>
+<span id="cb9-16"><a href="#cb9-16"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-17"><a href="#cb9-17"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb9-18"><a href="#cb9-18"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>See @fig-penguins.</code></pre>
 </section>
 <section id="code-chunks-6" class="slide level2">
 <h2>Code Chunks</h2>
@@ -1450,20 +1448,20 @@
 <section id="multiple-figures" class="slide level2">
 <h2>Multiple Figures</h2>
 <p>Put two plots side by side:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| layout-ncol: 2</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, </span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species))</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species), </span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">alpha =</span> <span class="fl">0.5</span>, </span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>                 <span class="at">position =</span> <span class="st">"identity"</span>)</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| layout-ncol: 2</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, </span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species))</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species), </span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">alpha =</span> <span class="fl">0.5</span>, </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>                 <span class="at">position =</span> <span class="st">"identity"</span>)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>Let’s add another plot to our chunk. Our goal is to display these plots side-by-side.</p>
 <style type="text/css">
@@ -1486,20 +1484,20 @@
 <section id="multiple-figures-2" class="slide level2">
 <h2>Multiple Figures</h2>
 <p>Put two plots side by side:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| layout: "[[30, 70]]"</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, </span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species))</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species), </span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">alpha =</span> <span class="fl">0.5</span>, </span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>                 <span class="at">position =</span> <span class="st">"identity"</span>)</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| layout: "[[30, 70]]"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species))</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">fill =</span> species), </span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">alpha =</span> <span class="fl">0.5</span>, </span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>                 <span class="at">position =</span> <span class="st">"identity"</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="code-options-for-all-chunks" class="slide level2 small">
 <h2>Code Options for All Chunks</h2>
@@ -1510,32 +1508,32 @@
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><strong>One chunk</strong></p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: plot-penguins</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, </span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Flipper and bill length"</span>,</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for penguins at Palmer Station LTER"</span>,</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Penguin species"</span>, <span class="at">shape =</span> <span class="st">"Penguin species"</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: plot-penguins</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> bill_length_mm)) <span class="sc">+</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species, <span class="at">shape =</span> species)) <span class="sc">+</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"darkorange"</span>,<span class="st">"purple"</span>,<span class="st">"cyan4"</span>)) <span class="sc">+</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Flipper and bill length"</span>,</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Dimensions for penguins at Palmer Station LTER"</span>,</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Flipper length (mm)"</span>, <span class="at">y =</span> <span class="st">"Bill length (mm)"</span>,</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Penguin species"</span>, <span class="at">shape =</span> <span class="st">"Penguin species"</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><strong>All chunks</strong></p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a href="#cb13-1"></a>---</span>
-<span id="cb13-2"><a href="#cb13-2"></a>title: "Hello, Quarto!"</span>
-<span id="cb13-3"><a href="#cb13-3"></a>format: html</span>
-<span id="cb13-4"><a href="#cb13-4"></a>editor: visual</span>
-<span id="cb13-5"><a href="#cb13-5"></a>execute:</span>
-<span id="cb13-6"><a href="#cb13-6"></a>  echo: false</span>
-<span id="cb13-7"><a href="#cb13-7"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href="#cb14-1"></a>---</span>
+<span id="cb14-2"><a href="#cb14-2"></a>title: "Hello, Quarto!"</span>
+<span id="cb14-3"><a href="#cb14-3"></a>format: html</span>
+<span id="cb14-4"><a href="#cb14-4"></a>editor: visual</span>
+<span id="cb14-5"><a href="#cb14-5"></a>execute:</span>
+<span id="cb14-6"><a href="#cb14-6"></a>  echo: false</span>
+<span id="cb14-7"><a href="#cb14-7"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1543,33 +1541,41 @@
 <section id="code-options-for-all-chunks-1" class="slide level2 small">
 <h2>Code Options for All Chunks</h2>
 <h3 id="code-folding">Code Folding</h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href="#cb14-1"></a>---</span>
-<span id="cb14-2"><a href="#cb14-2"></a>title: "Hello, Quarto!"</span>
-<span id="cb14-3"><a href="#cb14-3"></a>format:</span>
-<span id="cb14-4"><a href="#cb14-4"></a>  html:</span>
-<span id="cb14-5"><a href="#cb14-5"></a>    code-fold: true</span>
-<span id="cb14-6"><a href="#cb14-6"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<h3 id="code-tools">Code Tools</h3>
 <div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a href="#cb15-1"></a>---</span>
 <span id="cb15-2"><a href="#cb15-2"></a>title: "Hello, Quarto!"</span>
 <span id="cb15-3"><a href="#cb15-3"></a>format:</span>
 <span id="cb15-4"><a href="#cb15-4"></a>  html:</span>
-<span id="cb15-5"><a href="#cb15-5"></a>    code-tools:</span>
-<span id="cb15-6"><a href="#cb15-6"></a>      source: https://quarto.org</span>
-<span id="cb15-7"><a href="#cb15-7"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-5"><a href="#cb15-5"></a>    code-fold: true</span>
+<span id="cb15-6"><a href="#cb15-6"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h3 id="code-tools">Code Tools</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a href="#cb16-1"></a>---</span>
+<span id="cb16-2"><a href="#cb16-2"></a>title: "Hello, Quarto!"</span>
+<span id="cb16-3"><a href="#cb16-3"></a>format:</span>
+<span id="cb16-4"><a href="#cb16-4"></a>  html:</span>
+<span id="cb16-5"><a href="#cb16-5"></a>    code-tools:</span>
+<span id="cb16-6"><a href="#cb16-6"></a>      source: https://quarto.org</span>
+<span id="cb16-7"><a href="#cb16-7"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="code-options-for-all-chunks-2" class="slide level2 small">
 <h2>Code Options for All Chunks</h2>
 <h3 id="code-linking">Code Linking</h3>
 <p><strong>Needs downlit package</strong></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a href="#cb16-1"></a>---</span>
-<span id="cb16-2"><a href="#cb16-2"></a>title: "Hello, Quarto!"</span>
-<span id="cb16-3"><a href="#cb16-3"></a>format:</span>
-<span id="cb16-4"><a href="#cb16-4"></a>  html:</span>
-<span id="cb16-5"><a href="#cb16-5"></a>    code-link: true</span>
-<span id="cb16-6"><a href="#cb16-6"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-<img data-src="images/rstudio-code-link-preview.png" class="r-stretch"><aside class="notes">
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource {{yaml}} number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a href="#cb17-1"></a>---</span>
+<span id="cb17-2"><a href="#cb17-2"></a>title: "Hello, Quarto!"</span>
+<span id="cb17-3"><a href="#cb17-3"></a>format:</span>
+<span id="cb17-4"><a href="#cb17-4"></a>  html:</span>
+<span id="cb17-5"><a href="#cb17-5"></a>    code-link: true</span>
+<span id="cb17-6"><a href="#cb17-6"></a>---</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/rstudio-code-link-preview.png"></p>
+</div>
+</div>
+</div>
+<aside class="notes">
 <p>You might want to fold it and allow readers to view it at their discretion. You can do this via the code-fold option. Remove the echo option we previously added and add the code-fold HTML format option.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -1703,11 +1709,11 @@ The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io
 <section id="markdown-text-4" class="slide level2 small" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Markdown Text</h2>
 <h3 id="tables">Tables</h3>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode hljs"><span id="cb24-1" class="hljs-ln-code"><a href="#cb24-1"></a>| Right | Left | Default | Center |</span>
-<span id="cb24-2" class="hljs-ln-code"><a href="#cb24-2"></a>|------:|:-----|---------|:------:|</span>
-<span id="cb24-3" class="hljs-ln-code"><a href="#cb24-3"></a>|    12 | 12   | 12      |   12   |</span>
-<span id="cb24-4" class="hljs-ln-code"><a href="#cb24-4"></a>|   123 | 123  | 123     |  123   |</span>
-<span id="cb24-5" class="hljs-ln-code"><a href="#cb24-5"></a>|     1 | 1    | 1       |   1    |</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode hljs"><span id="cb25-1" class="hljs-ln-code"><a href="#cb25-1"></a>| Right | Left | Default | Center |</span>
+<span id="cb25-2" class="hljs-ln-code"><a href="#cb25-2"></a>|------:|:-----|---------|:------:|</span>
+<span id="cb25-3" class="hljs-ln-code"><a href="#cb25-3"></a>|    12 | 12   | 12      |   12   |</span>
+<span id="cb25-4" class="hljs-ln-code"><a href="#cb25-4"></a>|   123 | 123  | 123     |  123   |</span>
+<span id="cb25-5" class="hljs-ln-code"><a href="#cb25-5"></a>|     1 | 1    | 1       |   1    |</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -1742,13 +1748,13 @@ The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io
 <section id="markdown-text-5" class="slide level2 small" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Markdown Text</h2>
 <h3 id="tables-1">Tables</h3>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode hljs"><span id="cb25-1" class="hljs-ln-code"><a href="#cb25-1"></a>| Right | Left | Default | Center |</span>
-<span id="cb25-2" class="hljs-ln-code"><a href="#cb25-2"></a>|------:|:-----|---------|:------:|</span>
-<span id="cb25-3" class="hljs-ln-code"><a href="#cb25-3"></a>|    12 | 12   | 12      |   12   |</span>
-<span id="cb25-4" class="hljs-ln-code"><a href="#cb25-4"></a>|   123 | 123  | 123     |  123   |</span>
-<span id="cb25-5" class="hljs-ln-code"><a href="#cb25-5"></a>|     1 | 1    | 1       |   1    |</span>
-<span id="cb25-6" class="hljs-ln-code"><a href="#cb25-6"></a></span>
-<span id="cb25-7" class="hljs-ln-code"><a href="#cb25-7"></a>: Table Column Widths {tbl-colwidths="[10,30,30,30]"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode hljs"><span id="cb26-1" class="hljs-ln-code"><a href="#cb26-1"></a>| Right | Left | Default | Center |</span>
+<span id="cb26-2" class="hljs-ln-code"><a href="#cb26-2"></a>|------:|:-----|---------|:------:|</span>
+<span id="cb26-3" class="hljs-ln-code"><a href="#cb26-3"></a>|    12 | 12   | 12      |   12   |</span>
+<span id="cb26-4" class="hljs-ln-code"><a href="#cb26-4"></a>|   123 | 123  | 123     |  123   |</span>
+<span id="cb26-5" class="hljs-ln-code"><a href="#cb26-5"></a>|     1 | 1    | 1       |   1    |</span>
+<span id="cb26-6" class="hljs-ln-code"><a href="#cb26-6"></a></span>
+<span id="cb26-7" class="hljs-ln-code"><a href="#cb26-7"></a>: Table Column Widths {tbl-colwidths="[10,30,30,30]"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <table>
 <caption>Table Column Widths</caption>
 <colgroup>
@@ -1798,14 +1804,14 @@ The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io
 <h3 id="diagrams">Diagrams</h3>
 <p>Quarto has native support for embedding Mermaid and Graphviz diagrams.</p>
 <div class="cell" data-reveal="true" data-fig-width="6">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb26-2"><a href="#cb26-2"></a>%%| fig<span class="ot">-w</span>idth: <span class="dv">6</span></span>
-<span id="cb26-3"><a href="#cb26-3"></a>flowchart LR</span>
-<span id="cb26-4"><a href="#cb26-4"></a>  A[<span class="dv">1</span>] --&gt; B(<span class="dv">2</span>)</span>
-<span id="cb26-5"><a href="#cb26-5"></a>  B --&gt; C{<span class="dv">3</span>}</span>
-<span id="cb26-6"><a href="#cb26-6"></a>  C --&gt; D[<span class="dv">4</span>]</span>
-<span id="cb26-7"><a href="#cb26-7"></a>  C --&gt; E[<span class="dv">5</span>]</span>
-<span id="cb26-8"><a href="#cb26-8"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a>%%| fig<span class="ot">-w</span>idth: <span class="dv">6</span></span>
+<span id="cb27-3"><a href="#cb27-3"></a>flowchart LR</span>
+<span id="cb27-4"><a href="#cb27-4"></a>  A[<span class="dv">1</span>] --&gt; B(<span class="dv">2</span>)</span>
+<span id="cb27-5"><a href="#cb27-5"></a>  B --&gt; C{<span class="dv">3</span>}</span>
+<span id="cb27-6"><a href="#cb27-6"></a>  C --&gt; D[<span class="dv">4</span>]</span>
+<span id="cb27-7"><a href="#cb27-7"></a>  C --&gt; E[<span class="dv">5</span>]</span>
+<span id="cb27-8"><a href="#cb27-8"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <p>
@@ -1839,7 +1845,7 @@ The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io
 <section id="quarto-authoring-1" class="slide level2">
 <h2>Quarto Authoring</h2>
 <h3 id="equations">Equations</h3>
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy"><code class="sourceCode"><span id="cb27-1"><a href="#cb27-1"></a>$$E = mc^{2}$$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy"><code class="sourceCode"><span id="cb28-1"><a href="#cb28-1"></a>$$E = mc^{2}$$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><span class="math display">\[E = mc^{2}\]</span></p>
 </section>
 <section id="quarto-authoring-2" class="slide level2 small">
@@ -1858,53 +1864,48 @@ The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io
 </section>
 <section id="title-banners-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Title Banners</h2>
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource yaml number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb28-1" class="hljs-ln-code"><a href="#cb28-1"></a><span class="pp">---</span></span>
-<span id="cb28-2" class="hljs-ln-code"><a href="#cb28-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Penguins, meet Quarto!"</span></span>
-<span id="cb28-3" class="hljs-ln-code"><a href="#cb28-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
-<span id="cb28-4" class="hljs-ln-code"><a href="#cb28-4"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span>
-<span id="cb28-5" class="hljs-ln-code"><a href="#cb28-5"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource yaml number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb29-1" class="hljs-ln-code"><a href="#cb29-1"></a><span class="pp">---</span></span>
+<span id="cb29-2" class="hljs-ln-code"><a href="#cb29-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Penguins, meet Quarto!"</span></span>
+<span id="cb29-3" class="hljs-ln-code"><a href="#cb29-3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
+<span id="cb29-4" class="hljs-ln-code"><a href="#cb29-4"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span>
+<span id="cb29-5" class="hljs-ln-code"><a href="#cb29-5"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>Toggle on…</p>
 </div>
 </section>
 <section id="title-banners-2" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Title Banners</h2>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource yaml number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb29-1" class="hljs-ln-code"><a href="#cb29-1"></a><span class="pp">---</span></span>
-<span id="cb29-2" class="hljs-ln-code"><a href="#cb29-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Penguins, meet Quarto!"</span></span>
-<span id="cb29-3" class="hljs-ln-code"><a href="#cb29-3"></a><span class="fu">title-block-banner</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb29-4" class="hljs-ln-code"><a href="#cb29-4"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
-<span id="cb29-5" class="hljs-ln-code"><a href="#cb29-5"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span>
-<span id="cb29-6" class="hljs-ln-code"><a href="#cb29-6"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="title-banners-3" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Title Banners</h2>
-<p>Use a color…</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode numberSource yaml number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb30-1" class="hljs-ln-code"><a href="#cb30-1"></a><span class="pp">---</span></span>
 <span id="cb30-2" class="hljs-ln-code"><a href="#cb30-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Penguins, meet Quarto!"</span></span>
-<span id="cb30-3" class="hljs-ln-code"><a href="#cb30-3"></a><span class="fu">title-block-banner</span><span class="kw">:</span><span class="at"> </span><span class="st">"#FDA172"</span></span>
+<span id="cb30-3" class="hljs-ln-code"><a href="#cb30-3"></a><span class="fu">title-block-banner</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
 <span id="cb30-4" class="hljs-ln-code"><a href="#cb30-4"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
 <span id="cb30-5" class="hljs-ln-code"><a href="#cb30-5"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span>
 <span id="cb30-6" class="hljs-ln-code"><a href="#cb30-6"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="title-banners-4" class="slide level2" data-auto-animate="true">
+<section id="title-banners-3" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Title Banners</h2>
-<p>Or a photo!</p>
+<p>Use a color…</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode numberSource yaml number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb31-1" class="hljs-ln-code"><a href="#cb31-1"></a><span class="pp">---</span></span>
 <span id="cb31-2" class="hljs-ln-code"><a href="#cb31-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Penguins, meet Quarto!"</span></span>
-<span id="cb31-3" class="hljs-ln-code"><a href="#cb31-3"></a><span class="fu">title-block-banner</span><span class="kw">:</span><span class="at"> </span><span class="st">"banner-image.jpg"</span></span>
+<span id="cb31-3" class="hljs-ln-code"><a href="#cb31-3"></a><span class="fu">title-block-banner</span><span class="kw">:</span><span class="at"> </span><span class="st">"#FDA172"</span></span>
 <span id="cb31-4" class="hljs-ln-code"><a href="#cb31-4"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
 <span id="cb31-5" class="hljs-ln-code"><a href="#cb31-5"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span>
 <span id="cb31-6" class="hljs-ln-code"><a href="#cb31-6"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="title-banners-4" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Title Banners</h2>
+<p>Or a photo!</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode numberSource yaml number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode yaml hljs"><span id="cb32-1" class="hljs-ln-code"><a href="#cb32-1"></a><span class="pp">---</span></span>
+<span id="cb32-2" class="hljs-ln-code"><a href="#cb32-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Penguins, meet Quarto!"</span></span>
+<span id="cb32-3" class="hljs-ln-code"><a href="#cb32-3"></a><span class="fu">title-block-banner</span><span class="kw">:</span><span class="at"> </span><span class="st">"banner-image.jpg"</span></span>
+<span id="cb32-4" class="hljs-ln-code"><a href="#cb32-4"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span>
+<span id="cb32-5" class="hljs-ln-code"><a href="#cb32-5"></a><span class="fu">editor</span><span class="kw">:</span><span class="at"> visual</span></span>
+<span id="cb32-6" class="hljs-ln-code"><a href="#cb32-6"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <div style="color: #C04483">
 <p>Let’s try it!</p>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><embed data-src="https://quarto.org/docs/authoring/title-blocks.html#metadata-labels"></p>
-<p></p><figcaption>All title block metadata</figcaption><p></p>
-</figure>
-</div>
+<p><a href="https://quarto.org/docs/authoring/title-blocks.html#metadata-labels" data-preview-links="true">All title block metadata</a></p>
 </div>
 </section>
 <section id="divs-and-spans" class="slide level2">
@@ -1932,12 +1933,12 @@ This content can be styled with a border
 
 <h3 id="divs-2">Divs</h3>
 <h4 id="callout-blocks">Callout Blocks</h4>
-<div class="sourceCode" id="cb34"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb34-1"><a href="#cb34-1"></a>:::{.callout-tip}</span>
-<span id="cb34-2"><a href="#cb34-2"></a></span>
-<span id="cb34-3"><a href="#cb34-3"></a>Note that there are five types of callouts, including: </span>
-<span id="cb34-4"><a href="#cb34-4"></a><span class="in">`note`</span>, <span class="in">`tip`</span>, <span class="in">`warning`</span>, <span class="in">`caution`</span>, and <span class="in">`important`</span>.</span>
-<span id="cb34-5"><a href="#cb34-5"></a></span>
-<span id="cb34-6"><a href="#cb34-6"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1"></a>:::{.callout-tip}</span>
+<span id="cb35-2"><a href="#cb35-2"></a></span>
+<span id="cb35-3"><a href="#cb35-3"></a>Note that there are five types of callouts, including: </span>
+<span id="cb35-4"><a href="#cb35-4"></a><span class="in">`note`</span>, <span class="in">`tip`</span>, <span class="in">`warning`</span>, <span class="in">`caution`</span>, and <span class="in">`important`</span>.</span>
+<span id="cb35-5"><a href="#cb35-5"></a></span>
+<span id="cb35-6"><a href="#cb35-6"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <div class="callout callout-tip callout-captioned callout-style-default">
 <div class="callout-body">
@@ -1971,13 +1972,13 @@ This content can be styled with a border
 
 <h3 id="divs-3">Divs</h3>
 <h4 id="callout-blocks-1">Callout Blocks</h4>
-<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1"></a>::: {#call1 .callout-note appearance="simple"}</span>
-<span id="cb35-2"><a href="#cb35-2"></a></span>
-<span id="cb35-3"><a href="#cb35-3"></a><span class="fu">## Pay Attention</span></span>
-<span id="cb35-4"><a href="#cb35-4"></a></span>
-<span id="cb35-5"><a href="#cb35-5"></a>Using callouts is an effective way to highlight content that your reader give special consideration or attention.</span>
-<span id="cb35-6"><a href="#cb35-6"></a></span>
-<span id="cb35-7"><a href="#cb35-7"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb36-1"><a href="#cb36-1"></a>::: {#call1 .callout-note appearance="simple"}</span>
+<span id="cb36-2"><a href="#cb36-2"></a></span>
+<span id="cb36-3"><a href="#cb36-3"></a><span class="fu">## Pay Attention</span></span>
+<span id="cb36-4"><a href="#cb36-4"></a></span>
+<span id="cb36-5"><a href="#cb36-5"></a>Using callouts is an effective way to highlight content that your reader give special consideration or attention.</span>
+<span id="cb36-6"><a href="#cb36-6"></a></span>
+<span id="cb36-7"><a href="#cb36-7"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="call1" class="callout callout-note callout-captioned callout-style-simple">
 <div class="callout-body">
 <div class="callout-caption">
@@ -2040,12 +2041,12 @@ This content can be styled with a border
 
 <h3 id="divs-5">Divs</h3>
 <h4 id="multiple-columns">Multiple columns</h4>
-<div class="sourceCode" id="cb36"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy"><code class="sourceCode"><span id="cb36-1"><a href="#cb36-1"></a>::: {layout-ncol=2}</span>
-<span id="cb36-2"><a href="#cb36-2"></a></span>
-<span id="cb36-3"><a href="#cb36-3"></a>![](penguin.jpg)</span>
-<span id="cb36-4"><a href="#cb36-4"></a></span>
-<span id="cb36-5"><a href="#cb36-5"></a>Photo by &lt;a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"&gt;Cornelius Ventures&lt;/a&gt; on &lt;a href="https://unsplash.com/s/photos/penguin?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;</span>
-<span id="cb36-6"><a href="#cb36-6"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy"><code class="sourceCode"><span id="cb37-1"><a href="#cb37-1"></a>::: {layout-ncol=2}</span>
+<span id="cb37-2"><a href="#cb37-2"></a></span>
+<span id="cb37-3"><a href="#cb37-3"></a>![](penguin.jpg)</span>
+<span id="cb37-4"><a href="#cb37-4"></a></span>
+<span id="cb37-5"><a href="#cb37-5"></a>Photo by &lt;a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"&gt;Cornelius Ventures&lt;/a&gt; on &lt;a href="https://unsplash.com/s/photos/penguin?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"&gt;Unsplash&lt;/a&gt;</span>
+<span id="cb37-6"><a href="#cb37-6"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
@@ -2063,21 +2064,15 @@ This content can be styled with a border
 
 <h3 id="divs-6">Divs</h3>
 <h4 id="multiple-columns-1">Multiple columns</h4>
-<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy"><code class="sourceCode"><span id="cb37-1"><a href="#cb37-1"></a>::: {layout="[[1,1], [1]]"}</span>
-<span id="cb37-2"><a href="#cb37-2"></a>![penguin 1](penguin.jpg)</span>
-<span id="cb37-3"><a href="#cb37-3"></a></span>
-<span id="cb37-4"><a href="#cb37-4"></a>![penguin 2](penguin.jpg)</span>
-<span id="cb37-5"><a href="#cb37-5"></a></span>
-<span id="cb37-6"><a href="#cb37-6"></a>![penguin 3](penguin.jpg)</span>
-<span id="cb37-7"><a href="#cb37-7"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb38"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy"><code class="sourceCode"><span id="cb38-1"><a href="#cb38-1"></a>::: {layout="[[70,30], [100]]"}</span>
+<div class="sourceCode" id="cb38"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy"><code class="sourceCode"><span id="cb38-1"><a href="#cb38-1"></a>::: {layout="[[1,1], [1]]"}</span>
 <span id="cb38-2"><a href="#cb38-2"></a>![penguin 1](penguin.jpg)</span>
 <span id="cb38-3"><a href="#cb38-3"></a></span>
 <span id="cb38-4"><a href="#cb38-4"></a>![penguin 2](penguin.jpg)</span>
 <span id="cb38-5"><a href="#cb38-5"></a></span>
 <span id="cb38-6"><a href="#cb38-6"></a>![penguin 3](penguin.jpg)</span>
 <span id="cb38-7"><a href="#cb38-7"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb39"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy"><code class="sourceCode"><span id="cb39-1"><a href="#cb39-1"></a>::: {layout="[[40,-20,40], [100]]"}</span>
+<p><br></p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode numberSource {{markdown}} number-lines code-with-copy"><code class="sourceCode"><span id="cb39-1"><a href="#cb39-1"></a>::: {layout="[[70,30], [100]]"}</span>
 <span id="cb39-2"><a href="#cb39-2"></a>![penguin 1](penguin.jpg)</span>
 <span id="cb39-3"><a href="#cb39-3"></a></span>
 <span id="cb39-4"><a href="#cb39-4"></a>![penguin 2](penguin.jpg)</span>
@@ -2591,7 +2586,6 @@ This content can be styled with a border
 <li>Keep in touch on Twitter: <i class="fa-brands fa-twitter fa-1.4xl" aria-label="twitter"></i> <a href="https://twitter.com/ivelasq3">ivelasq3</a>.</li>
 <li>Read the <a href="https://quarto.org/">Quarto documentation</a>.</li>
 <li>Check out <a href="https://github.com/mcanouil/awesome-quarto">Awesome Quarto</a>.</li>
-<li>Find a great repository of Quarto resources at <a href="https://github.com/mcanouil/awesome-quarto">Awesome Quarto</a>.</li>
 </ul>
 </section>
 <section id="acknowledgements" class="slide level2">

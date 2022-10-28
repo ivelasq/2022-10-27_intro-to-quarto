@@ -26,7 +26,6 @@ Isabella Velásquez
 
 R-Ladies St. Louis
 
-
 ::: notes
 Hi everybody! Thank you so much for joining today's session. I am so excited to introduce Quarto and many thanks to Laura and the R-Ladies St. Louis co-organizers for having me today.
 :::
@@ -96,12 +95,8 @@ built on Pandoc.
 
 </center>
 
-:::{.notes}
-Quarto is an open-source scientific and technical publishing system built on Pandoc. Let’s break this down: 
-Open-source: RStudio believes that it’s better for everyone if the tools used for research and science are free and open. Free software means more reproducibility, widespread sharing of knowledge and techniques, and elimination of cost barriers. You can also see the source code and contribute, too.
-Scientific and technical: Scientific and technical means that Quarto has specific things for journal articles or scientific papers, like support for code execution, citations, footnotes, scientific markdown, equations, citations, crossrefs, so many things. We’ll be showing some of these later on, but Quarto definitely has the scientific publishing audience in mind.
-Publishing system: Quarto is a tool for writing dynamic documents that combine code, output, and text. It can embed output from Python, R, Julia, and Observable. Quarto can be rendered to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats.
-Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format.Quarto documents are authored with markdown, which is a plain text format. But Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write. We'll cover this as well.
+::: notes
+Quarto is an open-source scientific and technical publishing system built on Pandoc. Let's break this down: Open-source: RStudio believes that it's better for everyone if the tools used for research and science are free and open. Free software means more reproducibility, widespread sharing of knowledge and techniques, and elimination of cost barriers. You can also see the source code and contribute, too. Scientific and technical: Scientific and technical means that Quarto has specific things for journal articles or scientific papers, like support for code execution, citations, footnotes, scientific markdown, equations, citations, crossrefs, so many things. We'll be showing some of these later on, but Quarto definitely has the scientific publishing audience in mind. Publishing system: Quarto is a tool for writing dynamic documents that combine code, output, and text. It can embed output from Python, R, Julia, and Observable. Quarto can be rendered to create high-quality articles, reports, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, and more formats. Pandoc is the tool working behind the scenes to change Quarto documents to their finalized format.Quarto documents are authored with markdown, which is a plain text format. But Pandoc markdown is very rich and lets you control your document in very specific ways while being easy to read and write. We'll cover this as well.
 :::
 
 ## Quarto Origins
@@ -120,7 +115,7 @@ Can we reimplement R Markdown such that it's not tied to R?
 Check out [JJ Allaire's R Medicine Keynote](https://www.youtube.com/watch?v=9jGc0TxoRco)!
 :::
 
-:::{.notes}
+::: notes
 R Markdown is a file format for making dynamic documents with R. However, you need to call it from R to use it, and it was depedentn on knitr. If you're a Python user, it means you need to install R to use R Markdown. Quarto is a tool that you can call from the terminal or command line, and is independent from the computational systems. Quarto supports knitr, and can support others. So, you can think of Quarto as the next generation R Markdown that is fundamentally multilanguage and multiengine.
 :::
 
@@ -137,7 +132,7 @@ Check out [JJ Allaire's R Medicine Keynote](https://www.youtube.com/watch?v=9jGc
 :::
 
 ::: notes
-So the goals are to create these dynamic documents that can be reproducible and automated. [story about building documents]. For single-source publishing, you often need to create all sorts of output, like things that are printed, on the web, on the mobile. The idea is to being able to make publications from one source.
+So the goals are to create these dynamic documents that can be reproducible and automated. \[story about building documents\]. For single-source publishing, you often need to create all sorts of output, like things that are printed, on the web, on the mobile. The idea is to being able to make publications from one source.
 :::
 
 ## A new tool for literate programming
@@ -160,8 +155,8 @@ So the goals are to create these dynamic documents that can be reproducible and 
 Check out [JJ Allaire's R Medicine Keynote](https://www.youtube.com/watch?v=9jGc0TxoRco)!
 :::
 
-:::{.notes}
-Quarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. [click] There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!
+::: notes
+Quarto sits inside the big and broad literate programming world, which mixes narrative in text form with code for formatted outputs like documents and webpages and more. \[click\] There are lots of literate programming systems that support computation, like R Markdown, Org Mode, Jupyter Book, and now there is Quarto!
 :::
 
 ## Why a new system?
@@ -175,10 +170,9 @@ Quarto sits inside the big and broad literate programming world, which mixes nar
 
 Let's bring R Markdown to everybody!
 
-:::{.notes}
+::: notes
 So, if there already exist literate programming tools out there, why create a new one, especially since RStudio is also behind R Markdown? Like mentioned earlier, Quarto was built from the start to support multiple computational systems and ecosystems. This new system brings R Markdown to everybody.
 :::
-
 
 ## Why is it called "Quarto"?
 
@@ -373,8 +367,8 @@ Quarto has native support for Observable JS, a set of enhancements to vanilla JS
 
 ![](images/quarto.png)
 
-:::{.notes}
-So this is all good and well, but you may be wondering should you switch to Quarto if you already have another tool that you really like, you may be wondering whether or not you should switch. Here are some considerations. Quarto has a shared expression for core features. If you used the packages from the R Markdown ecosystem, then you may have had to switch between different ways of doing the same thing. In Quarto, you have a shared core syntax that is the same across all formats. Things like tabset, code folding, cross references in the same way. Another example is that Quarto has a universal theming system based on SCSS for all HTML output where core variables defined by bslib  and so it is compatible with Shiny, flexdashboard, and R Markdown themes. So, users can create very consistent and organized theming across content.
+::: notes
+So this is all good and well, but you may be wondering should you switch to Quarto if you already have another tool that you really like, you may be wondering whether or not you should switch. Here are some considerations. Quarto has a shared expression for core features. If you used the packages from the R Markdown ecosystem, then you may have had to switch between different ways of doing the same thing. In Quarto, you have a shared core syntax that is the same across all formats. Things like tabset, code folding, cross references in the same way. Another example is that Quarto has a universal theming system based on SCSS for all HTML output where core variables defined by bslib and so it is compatible with Shiny, flexdashboard, and R Markdown themes. So, users can create very consistent and organized theming across content.
 :::
 
 ## Why Quarto? {.scrollable}
@@ -393,7 +387,7 @@ So this is all good and well, but you may be wondering should you switch to Quar
 -   Conditional content
 -   Notebook filters
 
-:::{.notes}
+::: notes
 R Markdown isn't going away but big new features will be in Quarto, things like YAML intelligence, figure panels, layouts, which we'll cover later in the session.
 :::
 
@@ -469,23 +463,23 @@ Use the Render button (![](images/rstudio-render-button.png){width="25" height="
 
 Automatically render on save by checking the Render on Save option:
 
-![](images/rstudio-render-on-save.png) 
+![](images/rstudio-render-on-save.png)
 
 ::: notes
 In RStudio, you can use the Render button to render the file, or take it through that process of convering to markdown, pandoc processing, etc. and preview the output with a single click. If you're familiar with R Markdown, it is where the knit button would show for those document. If you prefer to automatically render whenever you save, you can check the Render on Save option on the editor toolbar. The preview will update whenever you re-render the document. Side-by-side preview works for both HTML and PDF outputs.
 :::
 
----
+------------------------------------------------------------------------
 
 ## YAML Intelligence {.small}
 
 YAML code completion is available for project files, YAML front matter, and executable cell options:
 
-![](images/rstudio-yaml-completion.png){width=400}
+![](images/rstudio-yaml-completion.png){width="400"}
 
 If you have incorrect YAML it will also be highlighted when documents are saved:
 
-![](images/rstudio-yaml-diagnostics.png){width=400}
+![](images/rstudio-yaml-diagnostics.png){width="400"}
 
 ::: {style="color: #C04483"}
 Let's try it!
@@ -519,7 +513,7 @@ RStudio has two options for editing documents: visual (on the left) and source (
 ![](images/markdown-text.png)
 :::
 
-::: {.notes}
+::: notes
 A Quarto document contains three types of content: a YAML header, code chunks, and markdown text.
 :::
 
@@ -534,7 +528,7 @@ A Quarto document contains three types of content: a YAML header, code chunks, a
 -   Uses key-value pairs in the format `key: value`
 :::
 
-:::{.notes}
+::: notes
 Quarto documents usually start with an (optional) YAML header demarcated by three dashes on either end. The basic syntax of YAML uses key-value pairs in the format key: value. It controls the output of the document and contain metadata for your document, like title and author.
 :::
 
@@ -548,8 +542,8 @@ editor: visual
 ---
 ```
 
-::: {.notes}
-Other YAML fields commonly found in headers of documents include metadata like author, subtitle, date as well as customization options like theme, fontcolor, fig-width, etc. 
+::: notes
+Other YAML fields commonly found in headers of documents include metadata like author, subtitle, date as well as customization options like theme, fontcolor, fig-width, etc.
 :::
 
 ## YAML {.small auto-animate="true"}
@@ -581,9 +575,9 @@ Let's try it!
 -   Can include optional chunk options, in YAML style, identified by `#|` at the beginning of the line
 :::
 
-::: {.notes}
+::: notes
 Code chunks are identified with three backticks, the language in curly brackets, and can have optional chunk options identified by the hashpipe at the beginning of the line within the chunk.
-::: 
+:::
 
 ## Code Chunks {.small auto-animate="true"}
 
@@ -653,8 +647,7 @@ ggplot(penguins,
 ```
 ````
 
-
-:::{.notes}
+::: notes
 The new hashpipe allows for consistency across Jupyter and knitr.
 :::
 
@@ -666,64 +659,66 @@ The new hashpipe allows for consistency across Jupyter and knitr.
 Let's try it!
 :::
 
-:::{.notes}
+::: notes
 In addition to rendering the complete document to view the results of code chunks you can also run each code chunk interactively in the RStudio editor by clicking the icon or keyboard shortcut (⇧⌘⏎). RStudio executes the code and displays the results either inline within your file or in the Console, depending on your preference.
 :::
 
-## Code Chunks
+## Code Chunks {.small}
 
 ### Cross referencing
 
-````
+```` markdown
 ```{{r}}
 #| label: fig-penguins
 #| warning: false
 
-ggplot(penguins, 
+ggplot(penguins,
        aes(x = flipper_length_mm, y = bill_length_mm)) +
   geom_point(aes(color = species, shape = species)) +
-  scale_color_manual(values = c("darkorange","purple","cyan4")) +
+  scale_color_manual(values = c("darkorange", "purple", "cyan4")) +
   labs(
     title = "Flipper and bill length",
     subtitle = "Dimensions for penguins at Palmer Station LTER",
-    x = "Flipper length (mm)", y = "Bill length (mm)",
-    color = "Penguin species", shape = "Penguin species"
+    x = "Flipper length (mm)",
+    y = "Bill length (mm)",
+    color = "Penguin species",
+    shape = "Penguin species"
   ) +
   theme_minimal()
 ```
-
-See @fig-penguins.
 ````
+
+```
+See @fig-penguins.
+```
 
 ## Code Chunks
 
 ### Cross referencing
 
-![](images/cross-ref.png){fig-align=center}
+![](images/cross-ref.png){fig-align="center"}
 
 ## Multiple Figures
 
 Put two plots side by side:
 
-````
-```{{r}}
-#| layout-ncol: 2
-#| warning: false
+    ```{{r}}
+    #| layout-ncol: 2
+    #| warning: false
 
-ggplot(penguins, 
-       aes(x = flipper_length_mm, y = bill_length_mm)) +
-  geom_point(aes(color = species, shape = species))
+    ggplot(penguins, 
+           aes(x = flipper_length_mm, y = bill_length_mm)) +
+      geom_point(aes(color = species, shape = species))
 
-ggplot(data = penguins, aes(x = flipper_length_mm)) +
-  geom_histogram(aes(fill = species), 
-                 alpha = 0.5, 
-                 position = "identity")
+    ggplot(data = penguins, aes(x = flipper_length_mm)) +
+      geom_histogram(aes(fill = species), 
+                     alpha = 0.5, 
+                     position = "identity")
 
-```
-````
+    ```
 
 ::: notes
-Let’s add another plot to our chunk. Our goal is to display these plots side-by-side.
+Let's add another plot to our chunk. Our goal is to display these plots side-by-side.
 :::
 
 ## Multiple Figures
@@ -736,22 +731,20 @@ Put two plots side by side:
 
 Put two plots side by side:
 
-````
-```{{r}}
-#| layout: "[[30, 70]]"
-#| warning: false
+    ```{{r}}
+    #| layout: "[[30, 70]]"
+    #| warning: false
 
-ggplot(penguins, 
-       aes(x = flipper_length_mm, y = bill_length_mm)) +
-  geom_point(aes(color = species, shape = species))
+    ggplot(penguins, 
+           aes(x = flipper_length_mm, y = bill_length_mm)) +
+      geom_point(aes(color = species, shape = species))
 
-ggplot(data = penguins, aes(x = flipper_length_mm)) +
-  geom_histogram(aes(fill = species), 
-                 alpha = 0.5, 
-                 position = "identity")
+    ggplot(data = penguins, aes(x = flipper_length_mm)) +
+      geom_histogram(aes(fill = species), 
+                     alpha = 0.5, 
+                     position = "identity")
 
-```
-````
+    ```
 
 ## Code Options for All Chunks {.small}
 
@@ -761,32 +754,29 @@ Hide all of the code and just show the output by specifying `echo: false` within
 
 ### Echo
 
-:::{layout-ncol=2}
-
+::: {layout-ncol="2"}
 ### One chunk
 
-````
-```{{r}}
-#| label: plot-penguins
-#| echo: false
+    ```{{r}}
+    #| label: plot-penguins
+    #| echo: false
 
-ggplot(penguins, 
-       aes(x = flipper_length_mm, y = bill_length_mm)) +
-  geom_point(aes(color = species, shape = species)) +
-  scale_color_manual(values = c("darkorange","purple","cyan4")) +
-  labs(
-    title = "Flipper and bill length",
-    subtitle = "Dimensions for penguins at Palmer Station LTER",
-    x = "Flipper length (mm)", y = "Bill length (mm)",
-    color = "Penguin species", shape = "Penguin species"
-  ) +
-  theme_minimal()
-```
-````
+    ggplot(penguins, 
+           aes(x = flipper_length_mm, y = bill_length_mm)) +
+      geom_point(aes(color = species, shape = species)) +
+      scale_color_manual(values = c("darkorange","purple","cyan4")) +
+      labs(
+        title = "Flipper and bill length",
+        subtitle = "Dimensions for penguins at Palmer Station LTER",
+        x = "Flipper length (mm)", y = "Bill length (mm)",
+        color = "Penguin species", shape = "Penguin species"
+      ) +
+      theme_minimal()
+    ```
 
 ### All chunks
 
-```{{yaml}}
+``` {{yaml}}
 ---
 title: "Hello, Quarto!"
 format: html
@@ -801,7 +791,7 @@ execute:
 
 ### Code Folding
 
-```{{yaml}}
+``` {{yaml}}
 ---
 title: "Hello, Quarto!"
 format:
@@ -812,7 +802,7 @@ format:
 
 ### Code Tools
 
-```{{yaml}}
+``` {{yaml}}
 ---
 title: "Hello, Quarto!"
 format:
@@ -828,7 +818,9 @@ format:
 
 **Needs downlit package**
 
-```{{yaml}}
+:::{layout-ncol=2}
+
+``` {{yaml}}
 ---
 title: "Hello, Quarto!"
 format:
@@ -838,6 +830,7 @@ format:
 ```
 
 ![](images/rstudio-code-link-preview.png)
+::::
 
 ::: notes
 You might want to fold it and allow readers to view it at their discretion. You can do this via the code-fold option. Remove the echo option we previously added and add the code-fold HTML format option.
@@ -852,7 +845,7 @@ You might want to fold it and allow readers to view it at their discretion. You 
 -   Quarto is based on Pandoc and uses its variation of markdown as its underlying document syntax
 :::
 
-:::{.notes}
+::: notes
 Markdown is a lightweight markup language for creating formatted text using a plain-text editor. Quarto uses markdown syntax for text.
 :::
 
@@ -867,11 +860,10 @@ The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io
 </pre>
 </div>
 ```
-
 The `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins "palmerpenguins R package") package contains size measurements for 344 penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.
 
-:::{.notes}
-If using the visual editor, you won’t need to learn much markdown syntax for authoring your document as you can use the menus and shortcuts to add a header, bold text, insert a table, etc. If using the source editor, you can achieve these with markdown expressions like ##, **bold**, etc.
+::: notes
+If using the visual editor, you won't need to learn much markdown syntax for authoring your document as you can use the menus and shortcuts to add a header, bold text, insert a table, etc. If using the source editor, you can achieve these with markdown expressions like ##, **bold**, etc.
 :::
 
 ------------------------------------------------------------------------
@@ -898,15 +890,15 @@ If using the visual editor, you won’t need to learn much markdown syntax for a
 
 ### Images and Links
 
-+---------------------------------------------------------------+-----------------------------------------------------------+
-| Markdown Syntax                                               | Output                                                    |
-+===============================================================+===========================================================+
-|     <https://quarto.org>                                      | <https://quarto.org>                                      |
-+---------------------------------------------------------------+-----------------------------------------------------------+
-|     [Quarto](https://quarto.org)                              | [Quarto](https://quarto.org)                              |
-+---------------------------------------------------------------+-----------------------------------------------------------+
-|     ![](penguin.jpg)                                          | ![](penguin.jpg)                                          |
-+---------------------------------------------------------------+-----------------------------------------------------------+
++------------------------------------+---------------------------------+
+| Markdown Syntax                    | Output                          |
++====================================+=================================+
+|     <https://quarto.org>           | <https://quarto.org>            |
++------------------------------------+---------------------------------+
+|     [Quarto](https://quarto.org)   | [Quarto](https://quarto.org)    |
++------------------------------------+---------------------------------+
+|     ![](penguin.jpg)               | ![](penguin.jpg)                |
++------------------------------------+---------------------------------+
 
 ::: aside
 Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cornelius Ventures</a> on <a href="https://unsplash.com/s/photos/penguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -914,7 +906,7 @@ Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&ut
 
 ## Markdown Text {.small auto-animate="true"}
 
-### Tables 
+### Tables
 
 ``` {{markdown}}
 | Right | Left | Default | Center |
@@ -1057,8 +1049,7 @@ editor: visual
 Let's try it!
 :::
 
-
-![All title block metadata](https://quarto.org/docs/authoring/title-blocks.html#metadata-labels)
+[All title block metadata](https://quarto.org/docs/authoring/title-blocks.html#metadata-labels){preview-links="true"}
 
 ## Divs and Spans
 
@@ -1066,30 +1057,26 @@ You can add classes, attributes, and other identifiers to content using Divs and
 
 ### Divs
 
-```
-::: {.border}
-This content can be styled with a border
-:::
-```
+    ::: {.border}
+    This content can be styled with a border
+    :::
 
 ### Spans
 
-```
-[This is *some text*]{.class key="val"}
-```
+    [This is *some text*]{.class key="val"}
 
----
+------------------------------------------------------------------------
 
 ### Divs
 
 ![](images/div.png)
 
-* `:::` - Div start and end
-* `#id` - label
-* `.class` - behavior
-* `attribute=value` - customization
+-   `:::` - Div start and end
+-   `#id` - label
+-   `.class` - behavior
+-   `attribute=value` - customization
 
----
+------------------------------------------------------------------------
 
 ### Divs
 
@@ -1114,7 +1101,7 @@ Note that there are five types of callouts, including: `note`, `tip`, `warning`,
 Pandoc and therefore Quarto can parse fenced Div blocks, which lets you modify the structure of your documents. You can add classes, attributes, and other identifiers to regions of content using Divs and Spans. You can think of divs as HTML divs but can be applied in PDFs or other formats like Word. Here is an example of a call out, which calls out special content for readers and you may have seen them in books or papers. Quarto has this for all different formats using Divs.
 :::
 
----
+------------------------------------------------------------------------
 
 ### Divs
 
@@ -1160,7 +1147,7 @@ Using callouts is an effective way to highlight content that your reader give sp
 
 #### Multiple columns
 
-```{{markdown}}
+``` {{markdown}}
 ::: {layout-ncol=2}
 
 ![](penguin.jpg)
@@ -1177,13 +1164,13 @@ Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&ut
 Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Cornelius Ventures</a> on <a href="https://unsplash.com/s/photos/penguin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 :::
 
----
+------------------------------------------------------------------------
 
 ### Divs
 
 #### Multiple columns
 
-```{{markdown}}
+``` {{markdown}}
 ::: {layout="[[1,1], [1]]"}
 ![penguin 1](penguin.jpg)
 
@@ -1192,21 +1179,9 @@ Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&ut
 ![penguin 3](penguin.jpg)
 :::
 ```
-
-
-```{{markdown}}
+<br>
+``` {{markdown}}
 ::: {layout="[[70,30], [100]]"}
-![penguin 1](penguin.jpg)
-
-![penguin 2](penguin.jpg)
-
-![penguin 3](penguin.jpg)
-:::
-```
-
-
-```{{markdown}}
-::: {layout="[[40,-20,40], [100]]"}
 ![penguin 1](penguin.jpg)
 
 ![penguin 2](penguin.jpg)
@@ -1221,7 +1196,7 @@ Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&ut
 
 #### Tabsets
 
-```{{markdown}}
+``` {{markdown}}
 ::: {.panel-tabset group="language"}
 ## R
 
@@ -1243,25 +1218,25 @@ Photo by <a href="https://unsplash.com/@corneliusventures?utm_source=unsplash&ut
 `import pandas as pd`
 :::
 
----
+------------------------------------------------------------------------
 
 ### Spans
 
 ![](images/span.png)
 
-* `[]` and `{}` for span start and end
-* `.class` - behavior
-* `key="val"` - customization
+-   `[]` and `{}` for span start and end
+-   `.class` - behavior
+-   `key="val"` - customization
 
 ::: notes
 You can also apply styles to inline text by creating spans. Use square brackets to surround the text and curly bracketes for the style you would like.
 :::
 
----
+------------------------------------------------------------------------
 
 ### Spans
 
-```{{markdown}}
+``` {{markdown}}
 This is text that is [red]{style="color:red;"}.
 ```
 
@@ -1269,27 +1244,27 @@ This is text that is [red]{style="color:red;"}.
 
 This is text that is [red]{style="color:red;"}.
 
----
+------------------------------------------------------------------------
 
 ### Spans
 
-```{{markdown}}
+``` {{markdown}}
 ![](penguin.jpg){fig-alt="A photo of a penguin jumping"}
 ```
 
 ![](penguin.jpg){fig-alt="A photo of a penguin jumping"}
 
-```{{markdown}}
+``` {{markdown}}
 ![](penguin.jpg){fig-alt="A photo of a penguin jumping" width=100}
 ```
 
-![](penguin.jpg){fig-alt="A photo of a penguin jumping" width=100}
+![](penguin.jpg){fig-alt="A photo of a penguin jumping" width="100"}
 
 ## Other formats
 
 You can create Revealjs presentations using the `revealjs` format.
 
-```{{yaml}}
+``` {{yaml}}
 ---
 title: "Penguins, meet Quarto!"
 format: revealjs
@@ -1307,7 +1282,7 @@ Let's try it!
 
 ### Code Line Numbers
 
-````markdown
+```` markdown
 ```{{r}}
 #| echo: true
 #| eval: FALSE
@@ -1319,7 +1294,9 @@ ggplot(penguins,
   scale_color_manual(values = c("darkorange","purple","cyan4")) 
 ```
 ````
+
 <br>
+
 ```{r}
 #| echo: true
 #| eval: FALSE
@@ -1339,7 +1316,7 @@ Most of the core capabilities of Quarto HTML Code Blocks are available for Revea
 
 ### Incremental
 
-```{{markdown}}
+``` {{markdown}}
 ::: {.incremental}
 - Adelie
 - Chinstrap
@@ -1347,12 +1324,11 @@ Most of the core capabilities of Quarto HTML Code Blocks are available for Revea
 :::
 ```
 
-::: {.incremental}
-- Adelie
-- Chinstrap
-- Gentoo
+::: incremental
+-   Adelie
+-   Chinstrap
+-   Gentoo
 :::
-
 
 [All about revealjs in Quarto](https://quarto.org/docs/presentations/revealjs/){preview-link="true"}
 
@@ -1368,7 +1344,7 @@ To create a new document in RStudio, go to **File** \> **New File** \> **Quarto 
 
 ![](images/new-doc.png){fig-align="center"}
 
-:::{.notes}
+::: notes
 A new document will be created with the following YAML. This document will be empty so it won't be terribly interesting.
 :::
 
@@ -1377,15 +1353,15 @@ A new document will be created with the following YAML. This document will be em
 Quarto projects are directories that provide:
 
 ::: incremental
-* A way to render all or some of the files in a directory with a single command (e.g. `quarto render myproject`).
-* A way to share YAML configuration across multiple documents.
-* The ability to redirect output artifacts to another directory.
-* The ability to freeze rendered output (i.e. don’t re-execute documents unless they have changed).
+-   A way to render all or some of the files in a directory with a single command (e.g. `quarto render myproject`).
+-   A way to share YAML configuration across multiple documents.
+-   The ability to redirect output artifacts to another directory.
+-   The ability to freeze rendered output (i.e. don't re-execute documents unless they have changed).
 :::
 
 ## Quarto Projects
 
-```{{yaml}}
+``` {{yaml}}
 project:
   output-dir: _output
 
@@ -1404,21 +1380,21 @@ format:
 ```
 
 ::: notes
-Within a Quarto project, you can render all the files at once or specify specific ones to render. So, say you have a website and you want to change the theme throughout, rather than rendering individual pages you can do that all with one command in a project.
-Quarto projects also include a _quarto.yml configuration file so that every document in the project inherits the metadata in that file. So, if you think about a blog, you probably want all your posts to have the same theme. If you use the Quarto command for making a new blog, it will automatically be a project, and you can configure the theme for all pages in the _quarto.yml file.
+Within a Quarto project, you can render all the files at once or specify specific ones to render. So, say you have a website and you want to change the theme throughout, rather than rendering individual pages you can do that all with one command in a project. Quarto projects also include a \_quarto.yml configuration file so that every document in the project inherits the metadata in that file. So, if you think about a blog, you probably want all your posts to have the same theme. If you use the Quarto command for making a new blog, it will automatically be a project, and you can configure the theme for all pages in the \_quarto.yml file.
 :::
 
 ## Quarto Projects
 
 ### Freeze
 
-```{{yaml}}
+``` {{yaml}}
 execute:
   freeze: true  # never re-render during project render
 ```
 
 <br>
-```{{yaml}}
+
+``` {{yaml}}
 execute:
   freeze: auto  # re-render only when source changes
 ```
@@ -1433,58 +1409,56 @@ Rendering a bunch of files can be quite time consuming depending on the computat
 
 Quarto includes 25 themes from the [Bootswatch](https://bootswatch.com/) project:
 
-* default
-* cerulean
-* cosmo
-* cyborg
-* darkly
-* flatly
-* journal
-* litera
-* lumen
-* lux
-* materia
-* minty
-* morph
-* pulse
-* quartz
-* sandstone
-* simplex
-* sketchy
-* slate
-* solar
-* spacelab
-* superhero
-* united
-* vapor
-* yeti
-* zephyr
+-   default
+-   cerulean
+-   cosmo
+-   cyborg
+-   darkly
+-   flatly
+-   journal
+-   litera
+-   lumen
+-   lux
+-   materia
+-   minty
+-   morph
+-   pulse
+-   quartz
+-   sandstone
+-   simplex
+-   sketchy
+-   slate
+-   solar
+-   spacelab
+-   superhero
+-   united
+-   vapor
+-   yeti
+-   zephyr
 
 ## HTML Theming
 
 Use these themes under the `theme` option in the YAML:
 
-```{{yaml}}
+``` {{yaml}}
 format:
   html:
     theme: flatly
 ```
 
-:::{layout-ncol=2}
+::: {layout-ncol="2"}
+![](images/theme-1.png){width="300"}
 
-![](images/theme-1.png){width=300}
-
-![](images/theme-2.png){width=300}
-
+![](images/theme-2.png){width="300"}
 :::
 
 ## HTML Theming
 
-You can do extensive additional customization using SASS theme files. 
+You can do extensive additional customization using SASS theme files.
 
-* Bootstrap defines over 1,400 variables that control fonts, colors, padding, borders, and much more!
+-   Bootstrap defines over 1,400 variables that control fonts, colors, padding, borders, and much more!
 
-```{{css}}
+``` {{css}}
 /*-- scss:defaults --*/
 
 $body-bg: #CDEEFD;
@@ -1499,7 +1473,7 @@ h1, h2, h3, h4, h5, h6 {
 
 Provide the custom theme under `theme`:
 
-```{{yaml}}
+``` {{yaml}}
 theme:
   - flatly
   - custom.scss
@@ -1507,24 +1481,22 @@ theme:
 
 . . .
 
-![](images/theme-3.png){width=300}
+![](images/theme-3.png){width="300"}
 
 ## HTML Theming
 
 Quarto also allows you to use a dark and light theme.
 
-```{{yaml}}
+``` {{yaml}}
 theme:
   light: flatly
   dark: darkly
 ```
 
-:::{layout-ncol=2}
+::: {layout-ncol="2"}
+![](images/theme-light.png){width="300"}
 
-![](images/theme-light.png){width=300}
-
-![](images/theme-dark.png){width=300}
-
+![](images/theme-dark.png){width="300"}
 :::
 
 # Publishing [Quarto]{.flow}
@@ -1535,10 +1507,10 @@ Since content rendered with Quarto uses standard formats (HTML, PDFs, MS Word, e
 
 Some options:
 
-* Quarto Pub
-* GitHub Pages
-* RStudio Connect
-* Netlify   
+-   Quarto Pub
+-   GitHub Pages
+-   RStudio Connect
+-   Netlify
 
 ::: notes
 There's an integrated quarto publish command that lets you publish in a bunch of places.
@@ -1548,14 +1520,16 @@ There's an integrated quarto publish command that lets you publish in a bunch of
 
 Quarto Pub is a free publishing service for content created with Quarto.
 
-* Must be publicly available
-* Cannot be larger than 100 MB
-* Has a soft limit of 10 GB a month
+-   Must be publicly available
+-   Cannot be larger than 100 MB
+-   Has a soft limit of 10 GB a month
 
 ``` {.bash filename="Terminal"}
 quarto publish quarto-pub hello.qmd
 ```
+
 <br>
+
 ``` {.bash filename="Terminal"}
 # token created at https://quartopub.com/profile/
 export QUARTO_PUB_AUTH_TOKEN="qpa_k4yWKEmlu5wkvx173Ls"
@@ -1579,7 +1553,6 @@ I hope that you enjoyed this intro to Quarto!
 -   Keep in touch on Twitter: {{< fa brands twitter size=1.4xl >}} [ivelasq3](https://twitter.com/ivelasq3).
 -   Read the [Quarto documentation](https://quarto.org/).
 -   Check out [Awesome Quarto](https://github.com/mcanouil/awesome-quarto).
--   Find a great repository of Quarto resources at [Awesome Quarto](https://github.com/mcanouil/awesome-quarto).
 
 ## Acknowledgements
 
